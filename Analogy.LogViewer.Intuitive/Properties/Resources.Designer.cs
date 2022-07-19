@@ -63,9 +63,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama {
+        public static System.Drawing.Bitmap Intuitive {
             get {
-                object obj = ResourceManager.GetObject("Kama", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16 {
+        public static System.Drawing.Bitmap Intuitive16x16 {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16Bookmarks {
+        public static System.Drawing.Bitmap Intuitive16x16Bookmarks {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16Bookmarks", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive16x16Bookmarks", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16CombineFiles {
+        public static System.Drawing.Bitmap Intuitive16x16OpenFile {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16CombineFiles", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive16x16OpenFile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16CompareFiles {
+        public static System.Drawing.Bitmap Intuitive16x16OpenFolder {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16CompareFiles", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive16x16OpenFolder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16connected {
+        public static System.Drawing.Bitmap Intuitive16x16Pooling {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16connected", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive16x16Pooling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16disconnected {
+        public static System.Drawing.Bitmap Intuitive16x16RecentFolders {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16disconnected", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive16x16RecentFolders", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16FileOpen {
+        public static System.Drawing.Bitmap Intuitive16x16Recents {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16FileOpen", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive16x16Recents", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16FilePooling {
+        public static System.Drawing.Bitmap Intuitive16x16Settings {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16FilePooling", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive16x16Settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16KnownLocations {
+        public static System.Drawing.Bitmap Intuitive32x32 {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16KnownLocations", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16OpenFolder {
+        public static System.Drawing.Bitmap Intuitive32x32Bookmarks {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16OpenFolder", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive32x32Bookmarks", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16OpenRecentFolder {
+        public static System.Drawing.Bitmap Intuitive32x32OpenFile {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16OpenRecentFolder", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive32x32OpenFile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16RecentFiles {
+        public static System.Drawing.Bitmap Intuitive32x32OpenFolder {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16RecentFiles", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive32x32OpenFolder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16SearchFiles {
+        public static System.Drawing.Bitmap Intuitive32x32Pooling {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16SearchFiles", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive32x32Pooling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama16x16Settings {
+        public static System.Drawing.Bitmap Intuitive32x32RecentFolders {
             get {
-                object obj = ResourceManager.GetObject("Kama16x16Settings", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive32x32RecentFolders", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama32x32 {
+        public static System.Drawing.Bitmap Intuitive32x32Recents {
             get {
-                object obj = ResourceManager.GetObject("Kama32x32", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive32x32Recents", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,269 +223,9 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Kama32x32Bookmarks {
+        public static System.Drawing.Bitmap Intuitive32x32Settings {
             get {
-                object obj = ResourceManager.GetObject("Kama32x32Bookmarks", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32CombineFiles {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32CombineFiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32CompareFiles {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32CompareFiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32connected {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32connected", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32disconnected {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32disconnected", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32FileOpen {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32FileOpen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32FilePooling {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32FilePooling", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32KnownLocations {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32KnownLocations", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32OpenFolder {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32OpenFolder", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32OpenRecentFolder {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32OpenRecentFolder", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32RecentFiles {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32RecentFiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32SearchFiles {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32SearchFiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Kama32x32Settings {
-            get {
-                object obj = ResourceManager.GetObject("Kama32x32Settings", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon KamaBlack {
-            get {
-                object obj = ResourceManager.GetObject("KamaBlack", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KamaBlack1 {
-            get {
-                object obj = ResourceManager.GetObject("KamaBlack1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KamaBlack16x16 {
-            get {
-                object obj = ResourceManager.GetObject("KamaBlack16x16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KamaBlack32x32 {
-            get {
-                object obj = ResourceManager.GetObject("KamaBlack32x32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon KamaIcon {
-            get {
-                object obj = ResourceManager.GetObject("KamaIcon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon KamaIcon2 {
-            get {
-                object obj = ResourceManager.GetObject("KamaIcon2", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KamaServices16x16 {
-            get {
-                object obj = ResourceManager.GetObject("KamaServices16x16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KamaServices32x32 {
-            get {
-                object obj = ResourceManager.GetObject("KamaServices32x32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KamaWhite {
-            get {
-                object obj = ResourceManager.GetObject("KamaWhite", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KamaWhiteBlack {
-            get {
-                object obj = ResourceManager.GetObject("KamaWhiteBlack", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KamaWhiteBlack16x16 {
-            get {
-                object obj = ResourceManager.GetObject("KamaWhiteBlack16x16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KamaWhiteBlack32x32 {
-            get {
-                object obj = ResourceManager.GetObject("KamaWhiteBlack32x32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap settings {
-            get {
-                object obj = ResourceManager.GetObject("settings", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap unity {
-            get {
-                object obj = ResourceManager.GetObject("unity", resourceCulture);
+                object obj = ResourceManager.GetObject("Intuitive32x32Settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

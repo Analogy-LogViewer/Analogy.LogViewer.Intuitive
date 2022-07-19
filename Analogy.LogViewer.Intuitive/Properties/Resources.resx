@@ -118,133 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Kama" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16Bookmarks" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16Bookmarks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive16x16Bookmarks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive16x16Bookmarks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16CombineFiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16CombineFiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive16x16OpenFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive16x16OpenFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16CompareFiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16CompareFiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive16x16OpenFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive16x16OpenFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16connected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16connected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive16x16Pooling" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive16x16Pooling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16disconnected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16disconnected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive16x16RecentFolders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive16x16RecentFolders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16FileOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16FileOpen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive16x16Recents" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive16x16Recents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16FilePooling" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16FilePooling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive16x16Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive16x16Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16KnownLocations" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16KnownLocations.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16OpenFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16OpenFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive32x32Bookmarks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive32x32Bookmarks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16OpenRecentFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16OpenRecentFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive32x32OpenFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive32x32OpenFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16RecentFiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16RecentFiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive32x32OpenFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive32x32OpenFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16SearchFiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16SearchFiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive32x32Pooling" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive32x32Pooling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama16x16Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama16x16Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive32x32RecentFolders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive32x32RecentFolders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive32x32Recents" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive32x32Recents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kama32x32Bookmarks" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32Bookmarks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32CombineFiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32CombineFiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32CompareFiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32CompareFiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32connected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32connected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32disconnected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32disconnected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32FileOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32FileOpen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32FilePooling" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32FilePooling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32KnownLocations" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32KnownLocations.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32OpenFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32OpenFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32OpenRecentFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32OpenRecentFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32RecentFiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32RecentFiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32SearchFiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32SearchFiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kama32x32Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kama32x32Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaBlack.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaBlack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaBlack.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaBlack16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaBlack16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaBlack32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaBlack32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaIcon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaIcon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaIcon2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaServices16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaServices16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaServices32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaServices32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaWhite.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaWhiteBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaWhiteBlack.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaWhiteBlack16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaWhiteBlack16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KamaWhiteBlack32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KamaWhiteBlack32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unity" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intuitive32x32Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intuitive32x32Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

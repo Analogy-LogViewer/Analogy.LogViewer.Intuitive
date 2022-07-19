@@ -48,9 +48,6 @@
 		</EmbeddedResource>
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="Resources\Kama.jpg" />
-	</ItemGroup>
-	<ItemGroup>
 		<None Include="Resources\unity.png" />
 	</ItemGroup>
 	<ItemGroup>
