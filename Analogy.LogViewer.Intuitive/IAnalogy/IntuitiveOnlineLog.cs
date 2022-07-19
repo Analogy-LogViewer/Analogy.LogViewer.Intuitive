@@ -8,7 +8,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
 {
     public class IntuitiveOnlineLog : gRPCServerClient
     {
-        public override string OptionalTitle { get; set; } = "Intuitive gRPC online logs";
+        public override string OptionalTitle { get; set; } = "Intuitive Real Time logs";
         public override Guid Id { get; set; } = new Guid("E37EEA25-6CA3-40B1-8454-D53485887693");
         public override IAnalogyOfflineDataProvider FileOperationsHandler { get; set; } = new IntuitiveOfflineLog();
         public override Image? ConnectedLargeImage { get; set; } = null;

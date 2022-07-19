@@ -27,7 +27,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
     public class DataSourceFactory : DataProvidersFactory
     {
         public override Guid FactoryId { get; set; } = IntuitiveFactories.Id;
-        public override string Title { get; set; } = "Kama Research Logs";
+        public override string Title { get; set; } = "Intuitive Logs";
 
         public override IEnumerable<IAnalogyDataProvider> DataProviders { get; set; } = new List<IAnalogyDataProvider>
             {
