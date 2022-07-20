@@ -28,9 +28,9 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
 
         public override Image GetSmallRecentFilesImage(Guid analogyComponentId) => Resources.Intuitive16x16Recents;
 
-        //public override Image GetLargeKnownLocationsImage(Guid analogyComponentId) => Resources.Kama32x32KnownLocations;
+        public override Image GetLargeKnownLocationsImage(Guid analogyComponentId) => Resources.Intuitive32x32KnownLocations;
 
-        //public override Image GetSmallKnownLocationsImage(Guid analogyComponentId) => Resources.Kama16x16KnownLocations;
+        public override Image GetSmallKnownLocationsImage(Guid analogyComponentId) => Resources.Intuitive16x16KnownLocations;
 
         //public override Image GetLargeSearchImage(Guid analogyComponentId) => Resources.Kama32x32SearchFiles;
 

@@ -93,6 +93,16 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Intuitive16x16KnownLocations {
+            get {
+                object obj = ResourceManager.GetObject("Intuitive16x16KnownLocations", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Intuitive16x16OpenFile {
             get {
                 object obj = ResourceManager.GetObject("Intuitive16x16OpenFile", resourceCulture);
@@ -166,6 +176,16 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         public static System.Drawing.Bitmap Intuitive32x32Bookmarks {
             get {
                 object obj = ResourceManager.GetObject("Intuitive32x32Bookmarks", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Intuitive32x32KnownLocations {
+            get {
+                object obj = ResourceManager.GetObject("Intuitive32x32KnownLocations", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
