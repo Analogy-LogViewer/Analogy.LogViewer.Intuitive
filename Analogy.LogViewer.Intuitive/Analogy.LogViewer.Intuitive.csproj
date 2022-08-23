@@ -32,23 +32,12 @@
 		<LangVersion>8.0</LangVersion>
 		<ApplicationIcon>AnalogyIcon.ico</ApplicationIcon>
 	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<DebugType>full</DebugType>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<DebugType>pdbonly</DebugType>
-	</PropertyGroup>
 	<ItemGroup>
 		<None Include="Resources\AnalogyIcon.png">
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
 		</None>
 		<!--<None Include="..\Nuget\README.md" Pack="true" PackagePath="\" />-->
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Remove="_ReSharper.Caches\**" />
-		<EmbeddedResource Remove="_ReSharper.Caches\**" />
-		<None Remove="_ReSharper.Caches\**" />
 	</ItemGroup>
 	<ItemGroup>
 		<Content Include="AnalogyIcon.ico" />
