@@ -24,7 +24,8 @@ jobs:
 
     env:
       Solution_Name: Analogy.LogViewer.Intuitive.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
-     
+           Test_Project_Path: Analogy.LogViewer.Intuitive.UnitTests\Analogy.LogViewer.Intuitive.UnitTests.csproj                 # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
+
     steps:
     - name: print type
       run:  echo "Type - ${{github.event_name}}"

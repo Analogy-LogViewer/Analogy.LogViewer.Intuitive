@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>net6.0-windows;net5.0-windows;net48;net472;net471</TargetFrameworks>
 		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-		<AssemblyTitle>Analogy.LogViewer.KamaResearch</AssemblyTitle>
+		<AssemblyTitle>Analogy.LogViewer.Intuitive</AssemblyTitle>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
@@ -13,13 +13,23 @@
 		<Company>Lior Banai</Company>
 		<Nullable>enable</Nullable>
 		<LangVersion>8.0</LangVersion>
-		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
-
 		<Product>Analogy.LogViewer.Intuitive</Product>
-		<Copyright>Copyright © Lior Banai</Copyright>
-		<OutputPath>bin\$(Configuration)\</OutputPath>
-		<Version>1.0.0</Version>
+		<Description>Analogy Log Parser for Intuitive Log Files</Description>
+		<Copyright>Lior Banai © 2022</Copyright>
+		<Version>0.6.0</Version>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>Lior Banai</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/Analogy-LogViewer/Analogy.LogViewer.Intuitive</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Analogy-LogViewer/Analogy.LogViewer.Intuitive</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReleaseNotes></PackageReleaseNotes>
+		<PackageIcon>AnalogyIcon.png</PackageIcon>
+		<PackageIconUrl />
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+		<Nullable>enable</Nullable>
+		<LangVersion>8.0</LangVersion>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 		<DebugType>full</DebugType>
