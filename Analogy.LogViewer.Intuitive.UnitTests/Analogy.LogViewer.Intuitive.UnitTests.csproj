@@ -20,6 +20,12 @@
     <ProjectReference Include="..\Analogy.LogViewer.Intuitive\Analogy.LogViewer.Intuitive.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="20220823.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 
 
 </Project>
