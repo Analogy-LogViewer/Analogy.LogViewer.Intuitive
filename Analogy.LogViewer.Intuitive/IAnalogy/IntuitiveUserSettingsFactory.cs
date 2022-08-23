@@ -19,7 +19,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
 
         public IntuitiveUserSettingsFactory()
         {
-
+            DataProviderSettings = new UserControl();
         }
         public override Task SaveSettingsAsync()
         {

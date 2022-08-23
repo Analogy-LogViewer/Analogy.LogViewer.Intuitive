@@ -18,7 +18,9 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
         public override string? InitialFolderFullPath { get; set; } = @"";
         public override Image LargeImage { get; set; } = Resources.Intuitive32x32OpenFile;
         public override Image SmallImage { get; set; } = Resources.Intuitive16x16OpenFile;
+        public override string FileOpenDialogFilters { get; set; }= "log files (*.log)|*.log|All files (*.*)|*.*";
 
+        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.log" };
         private LegacyFileLoader LegacyFileLoader { get; set; }
         public override Task InitializeDataProviderAsync(IAnalogyLogger logger)
         {
