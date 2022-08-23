@@ -13,7 +13,7 @@ namespace Analogy.LogViewer.Intuitive.UnitTests
         {
             CancellationTokenSource cts = new CancellationTokenSource();
             string fileName = "20220823.log";
-            IntuitiveLegacyOfflineLog parser = new IntuitiveLegacyOfflineLog();
+            LegacyFileLoader parser = new LegacyFileLoader();
             MessageHandlerForTesting forTesting = new MessageHandlerForTesting();
             var messages = await parser.Process(fileName, cts.Token, forTesting);
 

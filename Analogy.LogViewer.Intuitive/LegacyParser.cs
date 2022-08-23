@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Analogy.LogViewer.Intuitive
 {
@@ -14,11 +15,12 @@ namespace Analogy.LogViewer.Intuitive
         private readonly ISplitterLogParserSettings _logFileSettings;
 
         public readonly string[] splitters;
-        public static string[] SplitterValues { get; } = { "#*#" };
+        public static string[] SplitterValues { get; } = { " - " };
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
 
         public LegacyParser()
         {
+            splitters = SplitterValues;
             _logFileSettings = new SplitterLogParserSettings();
             _logFileSettings.AddMap(0,AnalogyLogMessagePropertyName.Date);
             _logFileSettings.AddMap(1,AnalogyLogMessagePropertyName.Module);

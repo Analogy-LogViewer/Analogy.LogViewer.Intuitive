@@ -56,23 +56,46 @@ namespace Analogy.LogViewer.Intuitive
             List<AnalogyLogMessage> messages = new List<AnalogyLogMessage>();
             try
             {
+                AnalogyLogMessage entry = null;
                 using (var stream = File.OpenRead(fileName))
                 {
                     long count = 0;
                     using (var reader = new StreamReader(stream))
                     {
                         var line = await reader.ReadLineAsync();
+
                         while (!reader.EndOfStream)
                         {
                             var nextLine = await reader.ReadLineAsync();
                             var hasSeparators = Parser.splitters.Any(nextLine.Contains);
                             if (!hasSeparators) // handle multi-line messages
                             {
-                                line = line + Environment.NewLine + nextLine;
+                                if (entry != null)
+                                {
+                                    entry.Text = entry.Text + Environment.NewLine + nextLine;
+                                }
+                                else
+                                {
+                                    line = line + Environment.NewLine + nextLine;
+                                }
                             }
                             else
                             {
-                                var entry = Parser.Parse(line);
+                                entry = Parser.Parse(line);
+                                if (entry.Level == AnalogyLogLevel.Unknown)
+                                {
+                                    entry.Level = AnalogyLogLevel.Information;
+                                }
+
+                                if (entry.Text.StartsWith("\n\r"))
+                                {
+                                    entry.Text = entry.Text.Remove(0, 1);
+                                }
+
+                                if (entry.Text.StartsWith("Exception"))
+                                {
+                                    entry.Level = AnalogyLogLevel.Error;
+                                }
                                 messages.Add(entry);
                                 line = nextLine;
                             }

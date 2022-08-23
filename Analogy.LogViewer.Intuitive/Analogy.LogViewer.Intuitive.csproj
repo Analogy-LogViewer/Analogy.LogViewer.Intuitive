@@ -13,10 +13,13 @@
 		<Company>Lior Banai</Company>
 		<Nullable>enable</Nullable>
 		<LangVersion>8.0</LangVersion>
+		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+
 		<Product>Analogy.LogViewer.Intuitive</Product>
 		<Copyright>Copyright © Lior Banai</Copyright>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
 		<Version>1.0.0</Version>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 		<DebugType>full</DebugType>
