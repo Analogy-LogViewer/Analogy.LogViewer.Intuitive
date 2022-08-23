@@ -92,7 +92,7 @@ namespace Analogy.LogViewer.Intuitive
                                     entry.Text = entry.Text.Remove(0, 1);
                                 }
 
-                                if (entry.Text.StartsWith("Exception"))
+                                if (entry.Text.StartsWith("Exception") || entry.Text.StartsWith("*** exception"))
                                 {
                                     entry.Level = AnalogyLogLevel.Error;
                                 }
