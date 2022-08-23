@@ -30,6 +30,7 @@
 		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
 		<Nullable>enable</Nullable>
 		<LangVersion>8.0</LangVersion>
+		<ApplicationIcon>AnalogyIcon.ico</ApplicationIcon>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 		<DebugType>full</DebugType>
@@ -41,6 +42,9 @@
 		<Compile Remove="_ReSharper.Caches\**" />
 		<EmbeddedResource Remove="_ReSharper.Caches\**" />
 		<None Remove="_ReSharper.Caches\**" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="AnalogyIcon.ico" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Update="Properties\Resources.Designer.cs">
