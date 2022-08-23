@@ -7,11 +7,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Analogy.Interfaces;
 using Analogy.LogViewer.Intuitive.Properties;
-using Analogy.LogViewer.Serilog.Managers;
+using Analogy.LogViewer.Template.Managers;
 
 namespace Analogy.LogViewer.Intuitive.IAnalogy
 {
-    public class IntuitiveLegacyOfflineLog : Analogy.LogViewer.Serilog.IAnalogy.OfflineDataProvider
+    public class IntuitiveLegacyOfflineLog : Analogy.LogViewer.Template.OfflineDataProvider
     {
         public override string OptionalTitle { get; set; } = "Intuitive Legacy offline logs";
         public override Guid Id { get; set; } = new Guid("37E17AD9-109E-4E31-A9D7-F0C8D289DC08");
