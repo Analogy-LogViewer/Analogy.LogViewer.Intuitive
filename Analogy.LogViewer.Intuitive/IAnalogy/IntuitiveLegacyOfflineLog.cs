@@ -13,7 +13,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
 {
     public class IntuitiveLegacyOfflineLog : Analogy.LogViewer.Template.OfflineDataProvider
     {
-        public override string OptionalTitle { get; set; } = "Intuitive Legacy offline logs";
+        public override string OptionalTitle { get; set; } = "CAST Legacy logs";
         public override Guid Id { get; set; } = new Guid("37E17AD9-109E-4E31-A9D7-F0C8D289DC08");
         public override string? InitialFolderFullPath { get; set; } = @"";
         public override Image LargeImage { get; set; } = Resources.Intuitive32x32OpenFile;
