@@ -31,8 +31,8 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
 
         public override IEnumerable<IAnalogyDataProvider> DataProviders { get; set; } = new List<IAnalogyDataProvider>
             {
-               //new IntuitiveOnlineLog(),
-               new IntuitiveLegacyOfflineLog()
+               new IntuitiveECSDataProvider(),
+               new IntuitiveLegacyOffLogsDataProvider()
             };
     }
 }

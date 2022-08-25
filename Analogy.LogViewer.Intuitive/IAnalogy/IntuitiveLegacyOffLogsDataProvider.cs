@@ -11,16 +11,16 @@ using Analogy.LogViewer.Template.Managers;
 
 namespace Analogy.LogViewer.Intuitive.IAnalogy
 {
-    public class IntuitiveLegacyOfflineLog : Analogy.LogViewer.Template.OfflineDataProvider
+    public class IntuitiveLegacyOffLogsDataProvider : Analogy.LogViewer.Template.OfflineDataProvider
     {
         public override string OptionalTitle { get; set; } = "CAST Legacy logs";
         public override Guid Id { get; set; } = new Guid("37E17AD9-109E-4E31-A9D7-F0C8D289DC08");
-        public override string? InitialFolderFullPath { get; set; } = @"";
+        public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
         public override Image LargeImage { get; set; } = Resources.Intuitive32x32OpenFile;
         public override Image SmallImage { get; set; } = Resources.Intuitive16x16OpenFile;
-        public override string FileOpenDialogFilters { get; set; }= "log files (*.log)|*.log|All files (*.*)|*.*";
+        public override string FileOpenDialogFilters { get; set; } = "log files (*.log)|*.log|All files (*.*)|*.*";
 
-        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.log" };
+        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.log", "*.*" };
         private LegacyFileLoader LegacyFileLoader { get; set; }
         public override Task InitializeDataProviderAsync(IAnalogyLogger logger)
         {
