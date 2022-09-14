@@ -22,11 +22,11 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
 
         public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.log", "*.*" };
         private LegacyFileLoader LegacyFileLoader { get; set; }
-        public override Task InitializeDataProviderAsync(IAnalogyLogger logger)
+        public override Task InitializeDataProvider(IAnalogyLogger logger)
         {
             LogManager.Instance.SetLogger(logger);
             LegacyFileLoader = new LegacyFileLoader();
-            return base.InitializeDataProviderAsync(logger);
+            return base.InitializeDataProvider(logger);
         }
 
         public override async Task<IEnumerable<AnalogyLogMessage>> Process(string fileName, CancellationToken token, ILogMessageCreatedHandler messagesHandler)

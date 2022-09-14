@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.IO.Compression;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Analogy.Interfaces;
 using Analogy.LogViewer.Intuitive.ECS;
 using Analogy.LogViewer.Template;
 using Analogy.LogViewer.Template.Managers;
-using Newtonsoft.Json;
 
 namespace Analogy.LogViewer.Intuitive.IAnalogy
 {
@@ -42,10 +39,10 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
         {
             JsonPerLineParser = new JsonFormatterParser(new ECSFormatMessageFields());
         }
-        public override Task InitializeDataProviderAsync(IAnalogyLogger logger)
+        public override Task InitializeDataProvider(IAnalogyLogger logger)
         {
             LogManager.Instance.SetLogger(logger);
-            return base.InitializeDataProviderAsync(logger);
+            return base.InitializeDataProvider(logger);
         }
 
         public override async Task<IEnumerable<AnalogyLogMessage>> Process(string fileName, CancellationToken token, ILogMessageCreatedHandler messagesHandler)
