@@ -13,4 +13,5 @@
  [![Nuget](https://img.shields.io/nuget/v/Analogy.LogViewer.Intuitive)](https://www.nuget.org/packages/Analogy.LogViewer.Intuitive/)
 </p>
 
-Intuitive implementation
+Intuitive implementation for internal log files
+
