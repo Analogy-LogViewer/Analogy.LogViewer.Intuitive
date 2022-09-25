@@ -33,6 +33,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
             {
                new IntuitiveECSDataProvider(),
                new IntuitiveLegacyOffLogsDataProvider()
+
             };
     }
 }
