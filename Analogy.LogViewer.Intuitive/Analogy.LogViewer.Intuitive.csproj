@@ -4,6 +4,11 @@
 		<TargetFrameworks>net8.0-windows;net9.0-windows;net10.0-windows</TargetFrameworks>
 		<VersionPrefix>9.0.2</VersionPrefix>
 		<VersionSuffix></VersionSuffix>
+		<UseWindowsForms>true</UseWindowsForms>
+		<Authors>Lior Banai</Authors>
+		<Product>Analogy.LogViewer.Intuitive</Product>
+		<PackageId>Analogy.LogViewer.Intuitive</PackageId>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 		<AssemblyTitle>Analogy.LogViewer.Intuitive</AssemblyTitle>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -13,14 +18,10 @@
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-		<UseWindowsForms>true</UseWindowsForms>
 		<Company>Lior Banai</Company>
-		<Product>Analogy.LogViewer.Intuitive</Product>
 		<Description>Analogy Log Parser for Intuitive Log Files</Description>
 		<Copyright>Lior Banai © 2023-2026</Copyright>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Authors>Lior Banai</Authors>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/Analogy-LogViewer/Analogy.LogViewer.Intuitive</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/Analogy-LogViewer/Analogy.LogViewer.Intuitive</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
