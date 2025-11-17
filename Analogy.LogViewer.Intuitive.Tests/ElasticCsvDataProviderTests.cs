@@ -15,7 +15,7 @@ namespace Analogy.LogViewer.Intuitive.Tests
             ElasticCsvDataProvider p = new ElasticCsvDataProvider();
             MessageHandlerForTesting handler = new MessageHandlerForTesting();
             var allMessages = (await p.Process(filename, cancellationTokenSource.Token, handler)).ToList();
-            Assert.Contains("Start new recording", allMessages[0].Text!, StringComparison.Ordinal);
+            Assert.Contains("Start new recording", allMessages[1].Text!, StringComparison.Ordinal);
         }
 
         [TestMethod]
