@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive
 {
@@ -20,11 +18,12 @@ namespace Analogy.LogViewer.Intuitive
 
         public static Dictionary<string, string> GetFieldValues()
         {
+#pragma warning disable CS8619 // Nullability of reference types in value doesn't match target type.
             return typeof(Constants)
                 .GetFields(BindingFlags.Public | BindingFlags.Static)
                 .Where(f => f.FieldType == typeof(string))
-                .ToDictionary(f => f.Name, f => (string)f.GetValue(null));
+                .ToDictionary(f => f.Name, f => (string)f.GetValue(null)!, StringComparer.OrdinalIgnoreCase);
+#pragma warning restore CS8619 // Nullability of reference types in value doesn't match target type.
         }
-
     }
 }

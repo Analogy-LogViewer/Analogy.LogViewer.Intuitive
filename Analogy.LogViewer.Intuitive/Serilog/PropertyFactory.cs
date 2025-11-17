@@ -1,46 +1,46 @@
-﻿using Newtonsoft.Json.Linq;
+﻿#pragma warning disable CS8604 // Possible null reference argument.
+using Newtonsoft.Json.Linq;
 using Serilog.Events;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.Serilog
 {
-    static class PropertyFactory
+    internal static class PropertyFactory
     {
-        const string TypeTagPropertyName = "$type";
+        private const string TypeTagPropertyName = "$type";
 
-        public static LogEventProperty CreateProperty(string name, JToken value, List<Rendering> renderings)
+        public static LogEventProperty CreateProperty(string name, JToken value, List<Rendering>? renderings)
         {
             return new LogEventProperty(name, CreatePropertyValue(value, renderings));
         }
 
-        static LogEventPropertyValue CreatePropertyValue(JToken value, List<Rendering> renderings)
+        private static LogEventPropertyValue CreatePropertyValue(JToken value, List<Rendering>? renderings)
         {
-            if (value.Type == JTokenType.Null)
+            if (value.Type is JTokenType.Null)
             {
-                return new ScalarValue(null);
+                return new ScalarValue(value: null);
             }
 
             if (value is JObject obj)
             {
-                JToken tt;
+                JToken? tt;
                 obj.TryGetValue(TypeTagPropertyName, out tt);
                 return new StructureValue(
-                    obj.Properties().Where(kvp => kvp.Name != TypeTagPropertyName).Select(kvp => CreateProperty(kvp.Name, kvp.Value, null)),
+#pragma warning disable MA0006
+                    obj.Properties().Where(kvp => kvp.Name != TypeTagPropertyName).Select(kvp => CreateProperty(kvp.Name, kvp.Value, renderings: null)),
+#pragma warning restore MA0006
                     tt?.Value<string>());
             }
 
             if (value is JArray arr)
             {
-                return new SequenceValue(arr.Select(v => CreatePropertyValue(v, null)));
+                return new SequenceValue(arr.Select(v => CreatePropertyValue(v, renderings: null)));
             }
 
-            var raw = value.Value<JValue>().Value;
+            var raw = value.Value<JValue>()?.Value;
 
-            return renderings != null && renderings.Any() ?
+            return renderings is not null && renderings.Count is not 0 ?
                 new RenderableScalarValue(raw, renderings) :
                 new ScalarValue(raw);
         }

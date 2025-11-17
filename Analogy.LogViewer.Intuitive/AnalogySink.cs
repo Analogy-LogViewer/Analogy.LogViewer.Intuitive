@@ -2,35 +2,31 @@
 using Serilog.Events;
 using Serilog.Formatting;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive
 {
-    class AnalogySink : ILogEventSink
+    internal sealed class AnalogySink : ILogEventSink
     {
-        readonly ITextFormatter _textFormatter;
-        public static string output = string.Empty;
+        private readonly ITextFormatter textFormatter;
+#pragma warning disable SA1401
+        public static string Output = string.Empty;
+#pragma warning restore SA1401
         public AnalogySink(ITextFormatter textFormatter)
         {
-            _textFormatter = textFormatter ?? throw new ArgumentNullException(nameof(textFormatter));
-
+            this.textFormatter = textFormatter ?? throw new ArgumentNullException(nameof(textFormatter));
         }
 
         public void Emit(LogEvent logEvent)
         {
-            if (logEvent == null)
+            if (logEvent is null)
             {
                 throw new ArgumentNullException(nameof(logEvent));
             }
 
             var sr = new StringWriter();
-            _textFormatter.Format(logEvent, sr);
-            output = sr.ToString().Trim();
+            textFormatter.Format(logEvent, sr);
+            Output = sr.ToString().Trim();
         }
     }
-
 }

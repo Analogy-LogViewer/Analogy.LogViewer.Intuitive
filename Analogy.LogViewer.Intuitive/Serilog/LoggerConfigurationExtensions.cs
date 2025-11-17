@@ -1,16 +1,16 @@
-﻿using System;
-using Serilog;
+﻿using Serilog;
 using Serilog.Configuration;
 using Serilog.Core;
 using Serilog.Events;
 using Serilog.Formatting;
 using Serilog.Formatting.Display;
+using System;
 
 namespace Analogy.LogViewer.Intuitive.Serilog
 {
     public static class LoggerConfigurationExtensions
     {
-        const string DefaultOutputTemplate = "{Message}{NewLine}{Exception}";
+        private const string DefaultOutputTemplate = "{msg}{NewLine}{Exception}";
 
         /// <summary>
         /// Write log events to the <see cref="System.Diagnostics.Trace"/>.
@@ -21,22 +21,22 @@ namespace Analogy.LogViewer.Intuitive.Serilog
         /// <param name="levelSwitch">A switch allowing the pass-through minimum level
         /// to be changed at runtime.</param>
         /// <param name="outputTemplate">A message template describing the format used to write to the sink.
-        /// the default is "{Timestamp} [{Level}] {Message}{NewLine}{Exception}".</param>
+        /// the default is "{Timestamp} [{Level}] {msg}{NewLine}{Exception}".</param>
         /// <param name="formatProvider">Supplies culture-specific formatting information, or null.</param>
         /// <returns>Configuration object allowing method chaining.</returns>
         public static LoggerConfiguration Analogy(
             this LoggerSinkConfiguration sinkConfiguration,
             LogEventLevel restrictedToMinimumLevel = LevelAlias.Minimum,
             string outputTemplate = DefaultOutputTemplate,
-            IFormatProvider formatProvider = null,
-            LoggingLevelSwitch levelSwitch = null)
+            IFormatProvider? formatProvider = null,
+            LoggingLevelSwitch? levelSwitch = null)
         {
-            if (sinkConfiguration == null)
+            if (sinkConfiguration is null)
             {
                 throw new ArgumentNullException(nameof(sinkConfiguration));
             }
 
-            if (outputTemplate == null)
+            if (outputTemplate is null)
             {
                 throw new ArgumentNullException(nameof(outputTemplate));
             }
@@ -61,14 +61,14 @@ namespace Analogy.LogViewer.Intuitive.Serilog
             this LoggerSinkConfiguration sinkConfiguration,
             ITextFormatter formatter,
             LogEventLevel restrictedToMinimumLevel = LevelAlias.Minimum,
-            LoggingLevelSwitch levelSwitch = null)
+            LoggingLevelSwitch? levelSwitch = null)
         {
-            if (sinkConfiguration == null)
+            if (sinkConfiguration is null)
             {
                 throw new ArgumentNullException(nameof(sinkConfiguration));
             }
 
-            if (formatter == null)
+            if (formatter is null)
             {
                 throw new ArgumentNullException(nameof(formatter));
             }

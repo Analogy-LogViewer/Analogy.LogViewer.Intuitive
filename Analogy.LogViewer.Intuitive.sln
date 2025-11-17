@@ -1,11 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32630.192
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Analogy.LogViewer.Intuitive", "Analogy.LogViewer.Intuitive\Analogy.LogViewer.Intuitive.csproj", "{B3355EDD-EBF8-4AE4-97AC-09F3BF240C92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analogy.LogViewer.Intuitive.UnitTests", "Analogy.LogViewer.Intuitive.UnitTests\Analogy.LogViewer.Intuitive.UnitTests.csproj", "{6C2D5075-51BD-4CA1-8D0D-9F1AF7B2CBFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analogy.LogViewer.Intuitive.Tests", "Analogy.LogViewer.Intuitive.Tests\Analogy.LogViewer.Intuitive.Tests.csproj", "{6405298E-7443-5896-D323-B562EC47C75F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{28A05E91-9D95-420E-BBDC-F3C4DDF07AA3}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		.github\workflows\dotnet-core-desktop.yml = .github\workflows\dotnet-core-desktop.yml
+		nuget.config = nuget.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +24,10 @@ Global
 		{B3355EDD-EBF8-4AE4-97AC-09F3BF240C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3355EDD-EBF8-4AE4-97AC-09F3BF240C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3355EDD-EBF8-4AE4-97AC-09F3BF240C92}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C2D5075-51BD-4CA1-8D0D-9F1AF7B2CBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C2D5075-51BD-4CA1-8D0D-9F1AF7B2CBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C2D5075-51BD-4CA1-8D0D-9F1AF7B2CBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C2D5075-51BD-4CA1-8D0D-9F1AF7B2CBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6405298E-7443-5896-D323-B562EC47C75F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6405298E-7443-5896-D323-B562EC47C75F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6405298E-7443-5896-D323-B562EC47C75F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6405298E-7443-5896-D323-B562EC47C75F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,11 +1,11 @@
-﻿using Analogy.Interfaces;
+﻿#pragma warning disable RS0030
+using Analogy.Interfaces;
+using Analogy.Interfaces.DataTypes;
+using Analogy.LogViewer.Template.Managers;
+using Microsoft.Extensions.Logging;
 using Serilog.Events;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Analogy.LogViewer.Template.Managers;
 
 namespace Analogy.LogViewer.Intuitive.Serilog
 {
@@ -37,14 +37,14 @@ namespace Analogy.LogViewer.Intuitive.Serilog
                     break;
                 default:
                     {
-                        LogManager.Instance.LogWarning("invalid log level:" + evt.Level, "Serilog parser");
+                        LogManager.Instance.LogWarning("invalid log level: {level}", evt.Level);
                         m.Level = AnalogyLogLevel.Unknown;
                         break;
                     }
             }
 
-            m.Date = evt.Timestamp.DateTime;
-            m.Text = AnalogySink.output;// evt.MessageTemplate.Text;
+            m.Date = evt.Timestamp;
+            m.Text = AnalogySink.Output;// LogEvent.MessageTemplate.Text;
             if (evt.Properties.TryGetValue(Constants.ProcessName, out var processName))
             {
                 if (processName is ScalarValue scalarValue &&
@@ -116,12 +116,10 @@ namespace Analogy.LogViewer.Intuitive.Serilog
                     m.User = environmentUserString;
                 }
                 if (environmentUser is StructureValue structure)
-
                 {
                     m.User = structure.ToString();
                 }
             }
-            m.AdditionalInformation = new Dictionary<string, string>();
             foreach (KeyValuePair<string, LogEventPropertyValue> property in evt.Properties)
             {
                 if (property.Key.Equals(Constants.EnvironmentUserName) ||
@@ -135,7 +133,7 @@ namespace Analogy.LogViewer.Intuitive.Serilog
                     continue;
                 }
 
-                m.AdditionalInformation.Add(property.Key, property.Value.ToString());
+                m.AddOrReplaceAdditionalProperty(property.Key, property.Value.ToString(), StringComparer.OrdinalIgnoreCase);
             }
             return m;
         }

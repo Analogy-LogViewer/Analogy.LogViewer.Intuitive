@@ -2,34 +2,31 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.Serilog
 {
-    class RenderableScalarValue : ScalarValue
+    internal sealed class RenderableScalarValue : ScalarValue
     {
-        readonly Dictionary<string, string> _renderings = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> renderings = new(StringComparer.OrdinalIgnoreCase);
 
         public RenderableScalarValue(object value, List<Rendering> renderings)
             : base(value)
         {
-            if (renderings == null)
+            if (renderings is null)
             {
                 throw new ArgumentNullException(nameof(renderings));
             }
 
             foreach (var rendering in renderings)
             {
-                _renderings[rendering.Format] = rendering.Rendered;
+                this.renderings[rendering.Format] = rendering.Rendered;
             }
         }
 
-        public override void Render(TextWriter output, string format = null, IFormatProvider formatProvider = null)
+        public override void Render(TextWriter output, string? format = null, IFormatProvider? formatProvider = null)
         {
-            string rendering;
-            if (format != null && _renderings.TryGetValue(format, out rendering))
+            string? rendering;
+            if (format is not null && renderings.TryGetValue(format, out rendering))
             {
                 output.Write(rendering);
             }

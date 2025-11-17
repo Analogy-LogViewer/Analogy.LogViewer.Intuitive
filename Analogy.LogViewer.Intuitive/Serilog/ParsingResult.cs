@@ -1,20 +1,15 @@
 ﻿using Serilog.Events;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.Serilog
 {
     public class ParsingResult
     {
-        public LogEvent? evt { get; set; }
+        public LogEvent? LogEvent { get; set; }
         public string Line { get; set; }
 
-        public ParsingResult(LogEvent? evt, string line)
+        public ParsingResult(LogEvent? logEvent, string line)
         {
-            this.evt = evt;
+            this.LogEvent = logEvent;
             this.Line = line;
         }
     }

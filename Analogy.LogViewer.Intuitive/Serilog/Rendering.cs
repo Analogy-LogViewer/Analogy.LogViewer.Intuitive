@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Analogy.LogViewer.Intuitive.Serilog
+﻿namespace Analogy.LogViewer.Intuitive.Serilog
 {
-    class Rendering
+    internal sealed class Rendering
     {
         public string Name { get; }
         public string Format { get; }
