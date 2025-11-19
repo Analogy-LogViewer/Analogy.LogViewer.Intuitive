@@ -10,7 +10,7 @@ namespace Analogy.LogViewer.Intuitive.Tests
         [TestMethod]
         public async Task TestParser()
         {
-            string filename = "C:\\Users\\lior.banai.LIORB-DELL\\Downloads\\events_690a24e9-39de-49b0-9754-73a98c5ccceb.19a9babccaf.csv";
+            string filename = "lighthouse.csv";
 
             using var cancellationTokenSource = new CancellationTokenSource();
             LightHouseParser p = new LightHouseParser();
