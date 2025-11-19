@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static DevExpress.Data.Filtering.Helpers.SubExprHelper;
 
 namespace Analogy.LogViewer.Intuitive.LogsParser
 {
@@ -42,6 +43,18 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
                 var config = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
                     MissingFieldFound = null,
+                    BadDataFound = (BadDataFoundArgs args) =>
+                    {
+                        var msg = new AnalogyLogMessage()
+                        {
+                            Text = args.RawRecord,
+                            Level = AnalogyLogLevel.Information,
+                            RawText = args.RawRecord,
+                            RawTextType = AnalogyRowTextType.PlainText,
+                        };
+                        messagesHandler.AppendMessage(msg, fileName);
+                        msgs.Add(msg);
+                    },
                     Delimiter = " ",
                     WhiteSpaceChars = [],
                 };
