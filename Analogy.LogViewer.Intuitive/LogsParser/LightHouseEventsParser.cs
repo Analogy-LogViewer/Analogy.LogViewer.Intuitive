@@ -20,7 +20,7 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
 {
     public class LightHouseEventsParser : OfflineDataProviderWinForms
     {
-        public override string? OptionalTitle { get; set; } = "LightHouse CSV Event Log";
+        public override string? OptionalTitle { get; set; } = "LightHouse Events CSV Log";
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
         public override Image? LargeImage { get; set; } = Resources.Intuitive32x32;
         public override Image? SmallImage { get; set; } = Resources.Intuitive16x16;

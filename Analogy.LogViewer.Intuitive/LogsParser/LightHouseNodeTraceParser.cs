@@ -15,9 +15,9 @@ using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.LogsParser
 {
-    public class LightHouseParser : OfflineDataProviderWinForms
+    public class LightHouseNodeTraceParser : OfflineDataProviderWinForms
     {
-        public override string? OptionalTitle { get; set; } = "LightHouse CSV Log";
+        public override string? OptionalTitle { get; set; } = "LightHouse Node Trace CSV Log";
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
         public override Image? LargeImage { get; set; } = Resources.Intuitive32x32;
         public override Image? SmallImage { get; set; } = Resources.Intuitive16x16;
