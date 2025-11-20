@@ -7,6 +7,25 @@ namespace Analogy.LogViewer.Intuitive.Tests
     [TestClass]
     public class LightHouseParserTests
     {
+        //[TestMethod]
+        //public async Task TestEventsParser()
+        //{
+        //    string filename = @"C:\Users\lior.banai.LIORB-DELL\Downloads\events_690a24e9-39de-49b0-9754-73a98c5ccceb.19a9babccaf.csv";
+
+        //    using var cancellationTokenSource = new CancellationTokenSource();
+        //    var p = new LightHouseEventsParser();
+        //    MessageHandlerForTesting handler = new MessageHandlerForTesting();
+        //    var allMessages = (await p.Process(filename, cancellationTokenSource.Token, handler)).ToList();
+        //    Assert.IsTrue(allMessages.Any());
+        //}
+        [TestMethod]
+        public void Parse_Event_DateTime_Test()
+        {
+            string time = "2025-11-04 16:26:32.749";
+            var parsed = LightHouseEventsParser.ParseDateTime(time);
+            var expected = new DateTimeOffset(2025, 11, 4, 16, 26, 32, TimeSpan.Zero).AddMilliseconds(749);
+            Assert.IsTrue(parsed.Equals(expected));
+        }
         [TestMethod]
         public async Task TestParser()
         {

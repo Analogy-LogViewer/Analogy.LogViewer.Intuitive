@@ -60,6 +60,8 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
             AddImage(p5.Id, p5.SmallImage, p5.LargeImage);
             var p6 = new LightHouseParser();
             AddImage(p6.Id, p6.SmallImage, p6.LargeImage);
+            var p7 = new LightHouseEventsParser();
+            AddImage(p6.Id, p7.SmallImage, p7.LargeImage);
             DataProviders = new List<IAnalogyDataProvider>
             {
                 p1,
@@ -68,6 +70,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
                 p4,
                 p5,
                 p6,
+                p7,
             };
         }
     }

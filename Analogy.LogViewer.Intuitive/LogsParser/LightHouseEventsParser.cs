@@ -1,6 +1,7 @@
 ﻿using Analogy.Interfaces;
 using Analogy.Interfaces.DataTypes;
 using Analogy.LogViewer.Intuitive.Properties;
+using Analogy.LogViewer.Intuitive.Types;
 using Analogy.LogViewer.Template.WinForms;
 using CsvHelper;
 using CsvHelper.Configuration;
@@ -10,19 +11,21 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.LogsParser
 {
-    public class LightHouseParser : OfflineDataProviderWinForms
+    public class LightHouseEventsParser : OfflineDataProviderWinForms
     {
-        public override string? OptionalTitle { get; set; } = "LightHouse CSV Log";
+        public override string? OptionalTitle { get; set; } = "LightHouse CSV Event Log";
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
         public override Image? LargeImage { get; set; } = Resources.Intuitive32x32;
         public override Image? SmallImage { get; set; } = Resources.Intuitive16x16;
-        public override string FileOpenDialogFilters { get; set; } = "LightHouse log files (*.csv)|*.csv";
-        public override Guid Id { get; set; } = new Guid("fc14e03d-1820-4a97-88d2-6d92c413472e");
+        public override string FileOpenDialogFilters { get; set; } = "LightHouse event log files (*.csv)|*.csv";
+        public override Guid Id { get; set; } = new Guid("D851928C-65F2-4625-B9E9-C58E487A481B");
 
         public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.csv" };
         private string PowerCycle { get; set; } = "";
@@ -39,6 +42,7 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
             {
                 var config = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
+                    HasHeaderRecord = true,
                     MissingFieldFound = null,
                     BadDataFound = (BadDataFoundArgs args) =>
                     {
@@ -52,14 +56,14 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
                         messagesHandler.AppendMessage(msg, fileName);
                         msgs.Add(msg);
                     },
-                    Delimiter = " ",
+                    Delimiter = ",",
                     WhiteSpaceChars = [],
                 };
                 using (var reader = new StreamReader(fileName))
                 using (var csv = new CsvReader(reader, config))
                 {
                     csv.Context.RegisterClassMap<LightHouseRowRecordMapper>();
-                    await foreach (var record in csv.GetRecordsAsync<LightHouseRowRecord>(token))
+                    await foreach (var record in csv.GetRecordsAsync<LightHouseEventRowRecord>(token))
                     {
                         try
                         {
@@ -82,52 +86,29 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
             return msgs;
         }
 
-        private IAnalogyLogMessage ParseMessage(LightHouseRowRecord record, string raw)
+        private IAnalogyLogMessage ParseMessage(LightHouseEventRowRecord record, string raw)
         {
-            string text = $"{record.PositionZero} {record.PositionOne} {record.PositionTwo} {record.PositionThree}";
-            if (record.PositionZero.StartsWith("#"))
-            {
-                if (record.PositionOne.Contains("power_cycle_uuid"))
-                {
-                    PowerCycle = record.PositionTwo;
-                }
-                var header = new AnalogyLogMessage()
-                {
-                    Text = text,
-                    Level = AnalogyLogLevel.Information,
-                    RawText = raw,
-                    RawTextType = AnalogyRowTextType.PlainText,
-                };
-                AddIfNotEmpty(header, "PowerCycleUuid", PowerCycle);
-                return header;
-            }
-            string start = $"{record.PositionZero} {record.PositionOne} {record.PositionTwo}";
-            string otherText = raw.Replace(start, "");
+            string otherText = raw.Substring(raw.IndexOf(record.Message, StringComparison.Ordinal) + record.Message.Length);
             AnalogyLogLevel level = AnalogyLogLevel.Information;
-            if (otherText.Contains("WARN"))
+            if (record.Message.StartsWith("WARN"))
             {
                 level = AnalogyLogLevel.Warning;
             }
+            if (record.Message.StartsWith("ERR"))
+            {
+                level = AnalogyLogLevel.Error;
+            }
             var m = new AnalogyLogMessage()
             {
-                Text = otherText,
-                Module = record.PositionOne,
-                Source = record.PositionTwo,
+                Text = $"{record.Message} {otherText} (Time: {record.Time} ServoSync: {record.Servosync})",
+                Source = record.Src,
+                Module = record.Message.Substring(0, record.Message.IndexOf(' ')),
                 Level = level,
-                Date = ParseDateTime(record.PositionZero),
-                
-                //MachineName = record.MachineName,
-                //User = record.User,
-                //PositionOne = record.LoggerName,
-                //ThreadId = int.TryParse(record.ThreadId, NumberStyles.Any, new CultureInfo("en-US"), out var ti) ? ti : -1,
-                //ProcessId = int.TryParse(record.ProcessId, NumberStyles.Any, new CultureInfo("en-US"), out var pi) ? pi : -1,
-                //Level = AnalogyLogMessage.ParseLogLevelFromString(record.LogLevel),
-                //LineNumber = long.TryParse(record.Line, NumberStyles.Any, new CultureInfo("en-US"), out var ln) ? ln : -1,
-                //MethodName = record.LabelMethod,
+                Date = ParseDateTime(record.Time),
                 RawTextType = AnalogyRowTextType.PlainText,
                 RawText = raw,
             };
-            AddIfNotEmpty(m, "PowerCycleUuid", PowerCycle);
+            AddIfNotEmpty(m, "Servosync", record.Servosync);
             if (m.AdditionalProperties is not null)
             {
                 if (m.AdditionalProperties.TryGetValue("Exception", out var er) && !string.IsNullOrEmpty(er))
@@ -152,7 +133,7 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
         }
         public static DateTimeOffset ParseDateTime(string timestamp)
         {
-            if (DateTimeOffset.TryParseExact(timestamp, "yyyy-MM-ddTHH:mm:ss.ffffffK", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal, out var dt))
+            if (DateTimeOffset.TryParse(timestamp, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal, out var dt))
             {
                 return dt;
             }
@@ -160,22 +141,14 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
         }
     }
 
-    public class LightHouseRowRecord
+    public sealed class LightHouseEventRowRecordMapper : ClassMap<LightHouseEventRowRecord>
     {
-        public string PositionZero { get; set; } = "";
-        public string PositionOne { get; set; } = "";
-        public string PositionTwo { get; set; } = "";
-        public string PositionThree { get; set; } = "";
-    }
-
-    public sealed class LightHouseRowRecordMapper : ClassMap<LightHouseRowRecord>
-    {
-        public LightHouseRowRecordMapper()
+        public LightHouseEventRowRecordMapper()
         {
-            Map(m => m.PositionZero).Optional().Index(0);
-            Map(m => m.PositionOne).Optional().Index(1);
-            Map(m => m.PositionTwo).Optional().Index(2);
-            Map(m => m.PositionThree).Optional().Index(3);
+            Map(m => m.Time).Name(["Time"]).Optional().Index(0);
+            Map(m => m.Servosync).Name("Servosync").Optional().Index(1);
+            Map(m => m.Src).Name("Src").Optional().Index(2);
+            Map(m => m.Message).Name("Message").Optional().Index(3);
         }
     }
 }
