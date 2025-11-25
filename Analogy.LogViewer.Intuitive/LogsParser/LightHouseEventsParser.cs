@@ -101,11 +101,18 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
             {
                 level = AnalogyLogLevel.Error;
             }
+
+            string module = record.Message;
+            var i = record.Message.IndexOf(' ');
+            if (i > 0)
+            {
+                module = record.Message[..record.Message.IndexOf(' ')];
+            }
             var m = new AnalogyLogMessage()
             {
                 Text = $"{record.Message} {otherText} (Time: {record.Time} ServoSync: {record.Servosync})",
                 Source = record.Src,
-                Module = record.Message.Substring(0, record.Message.IndexOf(' ')),
+                Module = module,
                 Level = level,
                 Date = ParseDateTime(record.Time),
                 RawTextType = AnalogyRowTextType.PlainText,
