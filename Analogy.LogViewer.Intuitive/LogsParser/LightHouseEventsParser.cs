@@ -20,6 +20,7 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
 {
     public class LightHouseEventsParser : OfflineDataProviderWinForms
     {
+        private static DateTimeOffset LastDateTimeOffset { get; set; } = DateTimeOffset.UtcNow;
         public override string? OptionalTitle { get; set; } = "LightHouse Events CSV Log";
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
         public override Image? LargeImage { get; set; } = Resources.Intuitive32x32;
@@ -52,6 +53,7 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
                             Level = AnalogyLogLevel.Information,
                             RawText = args.RawRecord,
                             RawTextType = AnalogyRowTextType.PlainText,
+                            Date = LastDateTimeOffset,
                         };
                         messagesHandler.AppendMessage(msg, fileName);
                         msgs.Add(msg);
@@ -59,6 +61,7 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
                     Delimiter = ",",
                     WhiteSpaceChars = [],
                 };
+                LastDateTimeOffset = DateTimeOffset.UtcNow;
                 using (var reader = new StreamReader(fileName))
                 using (var csv = new CsvReader(reader, config))
                 {
@@ -135,9 +138,9 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
         {
             if (DateTimeOffset.TryParse(timestamp, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal, out var dt))
             {
-                return dt;
+                LastDateTimeOffset = dt;
             }
-            return DateTimeOffset.UtcNow;
+            return LastDateTimeOffset;
         }
     }
 

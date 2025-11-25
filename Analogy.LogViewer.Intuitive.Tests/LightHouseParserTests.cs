@@ -10,7 +10,7 @@ namespace Analogy.LogViewer.Intuitive.Tests
         //[TestMethod]
         //public async Task TestEventsParser()
         //{
-        //    string filename = @"C:\Users\lior.banai.LIORB-DELL\Downloads\events_690a24e9-39de-49b0-9754-73a98c5ccceb.19a9babccaf.csv";
+        //    string filename = @"C:\Users\lbanai\Downloads\events_6924a1e0-0339-4f18-9aba-058f4108e7ac.19aba4180f7.csv";
 
         //    using var cancellationTokenSource = new CancellationTokenSource();
         //    var p = new LightHouseEventsParser();
