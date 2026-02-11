@@ -401,7 +401,7 @@
 		<None Include="Resources\settings.png" />
 	</ItemGroup>
 	<ItemGroup>
-  	<PackageReference Include="System.Text.Json" Version="10.0.2" />
+  	<PackageReference Include="System.Text.Json" Version="10.0.3" />
 		<None Update="Properties\Settings.settings">
 			<Generator>SettingsSingleFileGenerator</Generator>
 			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
