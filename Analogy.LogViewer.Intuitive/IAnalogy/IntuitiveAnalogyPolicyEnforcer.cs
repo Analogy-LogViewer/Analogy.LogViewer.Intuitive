@@ -4,6 +4,6 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
 {
     public class IntuitiveAnalogyPolicyEnforcer : AnalogyPolicyEnforcer
     {
-        public override bool DisableUpdates { get; set; } = false;
+        public override bool DisableUpdates { get; set; }
     }
 }
