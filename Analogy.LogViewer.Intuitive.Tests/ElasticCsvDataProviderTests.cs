@@ -9,8 +9,7 @@ namespace Analogy.LogViewer.Intuitive.Tests
         [TestMethod]
         public async Task TestParser()
         {
-            string filename = "C:\\Users\\lior.banai.LIORB-DELL\\Downloads\\premature_stream_closure\\premature stream closure 1.csv";
-
+            string filename = "log.csv";
             using var cancellationTokenSource = new CancellationTokenSource();
             ElasticCsvDataProvider p = new ElasticCsvDataProvider();
             MessageHandlerForTesting handler = new MessageHandlerForTesting();
