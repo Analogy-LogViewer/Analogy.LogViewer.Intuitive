@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<PackageDescription>Intuitive Analogy Log Viewer Provider</PackageDescription>
 		<TargetFrameworks>net8.0-windows;net9.0-windows;net10.0-windows</TargetFrameworks>
-		<VersionPrefix>9.0.5</VersionPrefix>
+		<VersionPrefix>9.0.6</VersionPrefix>
 		<VersionSuffix></VersionSuffix>
 		<UseWindowsForms>true</UseWindowsForms>
 		<Authors>Lior Banai</Authors>
@@ -401,7 +401,7 @@
 		<None Include="Resources\settings.png" />
 	</ItemGroup>
 	<ItemGroup>
-  	<PackageReference Include="System.Text.Json" Version="10.0.2" />
+  	<PackageReference Include="System.Text.Json" Version="10.0.3" />
 		<None Update="Properties\Settings.settings">
 			<Generator>SettingsSingleFileGenerator</Generator>
 			<LastGenOutput>Settings.Designer.cs</LastGenOutput>

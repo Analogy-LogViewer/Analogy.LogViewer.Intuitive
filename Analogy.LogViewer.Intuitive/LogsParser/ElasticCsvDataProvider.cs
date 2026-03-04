@@ -228,9 +228,9 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
     {
         public ElasticRowRecordMapper()
         {
-            Map(m => m.Timestamp).Optional().Name("@timestamp");
-            Map(m => m.MachineName).Optional().Name("agent.name");
-            Map(m => m.LogLevel).Optional().Name("log.level");
+            Map(m => m.Timestamp).Optional().Name("@timestamp", "Timestamp (@timestamp)");
+            Map(m => m.MachineName).Optional().Name("agent.name", "Hub (agent.name)");
+            Map(m => m.LogLevel).Optional().Name("log.level", "Log Level (log.level)");
             Map(m => m.Text).Optional().Name("message");
             Map(m => m.LabelMessage).Optional().Name("labels.msg");
             Map(m => m.LabelMethod).Optional().Name("labels.method");
