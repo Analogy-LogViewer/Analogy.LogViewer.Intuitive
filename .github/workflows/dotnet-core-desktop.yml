@@ -57,7 +57,7 @@ jobs:
       uses: actions/upload-artifact@v4.4.3
       with:
         name: artifactory_${{ matrix.configuration }}
-        path: ./Analogy.LogViewer.Intuitive/bin/${{ matrix.configuration }}
+        path: ./
   push-nuget:
     name: 'Push NuGet Packages'
     needs: build
@@ -72,7 +72,7 @@ jobs:
           name: artifactory_Release
       - name: 'Dotnet NuGet Push'
         run: |
-          Get-ChildItem ./ -Filter *.nupkg |
+          Get-ChildItem ./ -Recurse -Filter *.nupkg |
           ForEach-Object { dotnet nuget push $_ --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{secrets.NUGET_API_KEY}} }
         shell: pwsh
 
