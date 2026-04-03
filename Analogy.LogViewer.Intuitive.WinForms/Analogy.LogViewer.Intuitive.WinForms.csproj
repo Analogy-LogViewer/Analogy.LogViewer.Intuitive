@@ -6,12 +6,12 @@
 		<VersionSuffix></VersionSuffix>
 		<UseWindowsForms>true</UseWindowsForms>
 		<Authors>Lior Banai</Authors>
-		<Product>Analogy.LogViewer.Intuitive</Product>
-		<PackageId>Analogy.LogViewer.Intuitive</PackageId>
-		<AssemblyName>Analogy.LogViewer.Intuitive</AssemblyName>
+		<Product>Analogy.LogViewer.Intuitive.WinForms</Product>
+		<PackageId>Analogy.LogViewer.Intuitive.WinForms</PackageId>
+		<AssemblyName>Analogy.LogViewer.Intuitive.WinForms</AssemblyName>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-		<AssemblyTitle>Analogy.LogViewer.Intuitive</AssemblyTitle>
+		<AssemblyTitle>Analogy.LogViewer.Intuitive.WinForms</AssemblyTitle>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
