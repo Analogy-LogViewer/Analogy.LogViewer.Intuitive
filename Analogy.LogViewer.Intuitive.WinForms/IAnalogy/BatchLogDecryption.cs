@@ -2,8 +2,8 @@
 using Analogy.Interfaces.DataTypes;
 using Analogy.Interfaces.WinForms;
 using Analogy.Interfaces.WinForms.DataTypes;
-using Analogy.LogViewer.Intuitive.Properties;
 using Analogy.LogViewer.Intuitive.UserControls;
+using Analogy.LogViewer.Intuitive.WinForms.Properties;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Drawing;

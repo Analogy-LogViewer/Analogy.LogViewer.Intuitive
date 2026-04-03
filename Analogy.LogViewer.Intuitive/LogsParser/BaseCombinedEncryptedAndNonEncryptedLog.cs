@@ -1,7 +1,6 @@
 ﻿using Analogy.Interfaces;
 using Analogy.Interfaces.DataTypes;
-using Analogy.LogViewer.Intuitive.Properties;
-using Analogy.LogViewer.Template.WinForms;
+using Analogy.LogViewer.Template;
 using MediaManager.Logging;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,12 +12,10 @@ using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.LogsParser
 {
-    public abstract class BaseCombinedEncryptedAndNonEncryptedLog : OfflineDataProviderWinForms
+    public abstract class BaseCombinedEncryptedAndNonEncryptedLog : OfflineDataProvider
     {
         public override string? OptionalTitle { get; set; } = "BaseCombined Encrypted And Non Encrypted Log";
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
-        public override Image? LargeImage { get; set; } = Resources.Intuitive32x32OpenFile;
-        public override Image? SmallImage { get; set; } = Resources.Intuitive16x16OpenFile;
         public override string FileOpenDialogFilters { get; set; } = "log files (*.log)|*.log|All files (*.*)|*.*";
         public override Guid Id { get; set; } = new Guid("33d33122-8752-44cd-911b-86a4ae7bee2a");
 

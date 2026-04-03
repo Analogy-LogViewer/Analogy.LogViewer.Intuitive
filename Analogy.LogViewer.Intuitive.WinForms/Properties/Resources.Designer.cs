@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Analogy.LogViewer.Intuitive.Properties {
+namespace Analogy.LogViewer.Intuitive.WinForms.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Analogy.LogViewer.Intuitive.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Analogy.LogViewer.Intuitive.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Analogy.LogViewer.Intuitive.WinForms.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -5,8 +5,7 @@
 using Analogy.Interfaces;
 using Analogy.Interfaces.DataTypes;
 using Analogy.LogViewer.Intuitive.LogsParser;
-using Analogy.LogViewer.Intuitive.Properties;
-using Analogy.LogViewer.Template;
+using Analogy.LogViewer.Intuitive.WinForms.Properties;
 using Analogy.LogViewer.Template.WinForms;
 using System;
 using System.Collections.Generic;

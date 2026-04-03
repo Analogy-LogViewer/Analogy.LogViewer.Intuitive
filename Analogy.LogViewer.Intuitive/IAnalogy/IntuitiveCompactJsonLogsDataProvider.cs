@@ -1,10 +1,9 @@
 ﻿using Analogy.Interfaces;
 using Analogy.Interfaces.DataTypes;
-using Analogy.LogViewer.Intuitive.Properties;
 using Analogy.LogViewer.Serilog;
 using Analogy.LogViewer.Serilog.DataTypes;
+using Analogy.LogViewer.Template;
 using Analogy.LogViewer.Template.Managers;
-using Analogy.LogViewer.Template.WinForms;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -17,15 +16,12 @@ using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.IAnalogy
 {
-    public class IntuitiveCompactJsonLogsDataProvider : OfflineDataProviderWinForms
+    public class IntuitiveCompactJsonLogsDataProvider : OfflineDataProvider
     {
         public override string? OptionalTitle { get; set; } = "CAST Compact Json Formatter logs";
         public override Guid Id { get; set; } = new Guid("287d85c5-33c5-4cdc-bd85-632854284a08");
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
-        public override Image? LargeImage { get; set; } = Resources.Intuitive32x32OpenFile;
-        public override Image? SmallImage { get; set; } = Resources.Intuitive16x16OpenFile;
         public override string FileOpenDialogFilters { get; set; } = "log files (*.log)|*.log|All files (*.*)|*.*";
-
         public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.log", "*.*" };
         private CompactJsonFormatParser CompactJsonFormatParser { get; set; } = null!;
 

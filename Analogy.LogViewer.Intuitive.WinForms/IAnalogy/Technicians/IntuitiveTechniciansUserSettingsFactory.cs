@@ -1,6 +1,5 @@
-﻿using Analogy.Interfaces;
-using Analogy.LogViewer.Intuitive.Properties;
-using Analogy.LogViewer.Intuitive.UserControls;
+﻿using Analogy.LogViewer.Intuitive.UserControls;
+using Analogy.LogViewer.Intuitive.WinForms.Properties;
 using Analogy.LogViewer.Template.WinForms;
 using Microsoft.Extensions.Logging;
 using System;

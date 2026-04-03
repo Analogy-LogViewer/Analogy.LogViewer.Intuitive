@@ -1,4 +1,4 @@
-﻿using Analogy.LogViewer.Intuitive.Properties;
+﻿using Analogy.LogViewer.Intuitive.WinForms.Properties;
 using Analogy.LogViewer.Template.WinForms;
 using System;
 using System.Drawing;

@@ -1,7 +1,6 @@
 ﻿using Analogy.Interfaces;
 using Analogy.Interfaces.DataTypes;
-using Analogy.LogViewer.Intuitive.Properties;
-using Analogy.LogViewer.Template.WinForms;
+using Analogy.LogViewer.Template;
 using CsvHelper;
 using CsvHelper.Configuration;
 using Microsoft.Extensions.Logging;
@@ -15,12 +14,10 @@ using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.LogsParser
 {
-    public class LightHouseNodeTraceParser : OfflineDataProviderWinForms
+    public class LightHouseNodeTraceParser : OfflineDataProvider
     {
         public override string? OptionalTitle { get; set; } = "LightHouse Node Trace CSV Log";
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
-        public override Image? LargeImage { get; set; } = Resources.Intuitive32x32;
-        public override Image? SmallImage { get; set; } = Resources.Intuitive16x16;
         public override string FileOpenDialogFilters { get; set; } = "LightHouse log files (*.csv)|*.csv";
         public override Guid Id { get; set; } = new Guid("fc14e03d-1820-4a97-88d2-6d92c413472e");
 

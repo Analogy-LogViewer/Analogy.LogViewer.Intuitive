@@ -2,31 +2,24 @@
 #pragma warning disable RS0030
 using Analogy.Interfaces;
 using Analogy.Interfaces.DataTypes;
-using Analogy.LogViewer.Intuitive.Properties;
-using Analogy.LogViewer.Template.WinForms;
+using Analogy.LogViewer.Template;
 using CsvHelper;
 using CsvHelper.Configuration;
-using MediaManager.Logging;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.LogsParser
 {
-    public sealed class ElasticCsvDataProvider : OfflineDataProviderWinForms
+    public sealed class ElasticCsvDataProvider : OfflineDataProvider
     {
         public override string? OptionalTitle { get; set; } = "Hawk-Eye CSV Log";
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
-        public override Image? LargeImage { get; set; } = Resources.elasticsearch32x32;
-        public override Image? SmallImage { get; set; } = Resources.elasticsearch16x16;
         public override string FileOpenDialogFilters { get; set; } = "log files (*.csv)|*.csv";
         public override Guid Id { get; set; } = new Guid("417535d6-ed53-42aa-a0b2-f3a0cf96241f");
 
