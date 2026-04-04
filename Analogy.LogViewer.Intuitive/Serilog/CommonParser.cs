@@ -1,5 +1,4 @@
 ﻿#pragma warning disable RS0030
-using Analogy.Interfaces;
 using Analogy.Interfaces.DataTypes;
 using Analogy.LogViewer.Template.Managers;
 using Microsoft.Extensions.Logging;

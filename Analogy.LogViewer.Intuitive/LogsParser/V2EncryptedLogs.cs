@@ -1,5 +1,4 @@
-﻿using Analogy.Interfaces;
-using Analogy.Interfaces.DataTypes;
+﻿using Analogy.Interfaces.DataTypes;
 using Analogy.LogViewer.Intuitive.Loaders;
 using Microsoft.Extensions.Logging;
 using System;

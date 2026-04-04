@@ -1,5 +1,4 @@
-﻿using Analogy.Interfaces;
-using Analogy.Interfaces.DataTypes;
+﻿using Analogy.Interfaces.DataTypes;
 using Analogy.LogViewer.ElasticCommonSchema.Parsers;
 using Analogy.LogViewer.Intuitive.Managers;
 using System;

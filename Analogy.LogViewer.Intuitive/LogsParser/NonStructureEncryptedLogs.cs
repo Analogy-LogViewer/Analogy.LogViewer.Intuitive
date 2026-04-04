@@ -1,5 +1,4 @@
-﻿using Analogy.Interfaces;
-using Analogy.Interfaces.DataTypes;
+﻿using Analogy.Interfaces.DataTypes;
 using System;
 
 namespace Analogy.LogViewer.Intuitive.LogsParser

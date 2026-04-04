@@ -1,8 +1,6 @@
-﻿using Analogy.Interfaces;
-using Analogy.LogViewer.Template;
+﻿using Analogy.LogViewer.Template;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Drawing;
 using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.IAnalogy

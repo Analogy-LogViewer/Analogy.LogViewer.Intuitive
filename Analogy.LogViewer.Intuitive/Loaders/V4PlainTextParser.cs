@@ -1,6 +1,5 @@
 ﻿#pragma warning disable MA0011
 #pragma warning disable RS0030
-using Analogy.Interfaces;
 using Analogy.Interfaces.DataTypes;
 using System;
 using System.Collections.Generic;

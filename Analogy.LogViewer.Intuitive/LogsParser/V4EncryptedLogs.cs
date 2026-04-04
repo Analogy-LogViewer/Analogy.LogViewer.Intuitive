@@ -1,10 +1,7 @@
-﻿using Analogy.Interfaces;
-using Analogy.Interfaces.DataTypes;
+﻿using Analogy.Interfaces.DataTypes;
 using Analogy.LogViewer.ElasticCommonSchema.Parsers;
 using Analogy.LogViewer.Intuitive.Managers;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.Intuitive.LogsParser
 {

@@ -1,5 +1,4 @@
 ﻿#pragma warning disable CS8603 // Possible null reference return.
-using Analogy.Interfaces;
 using Analogy.Interfaces.DataTypes;
 using Newtonsoft.Json;
 using System;
@@ -9,7 +8,6 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Analogy.LogViewer.Intuitive
 {
