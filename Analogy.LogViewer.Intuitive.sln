@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analogy.LogViewer.Intuitive
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{28A05E91-9D95-420E-BBDC-F3C4DDF07AA3}"
 	ProjectSection(SolutionItems) = preProject
+		.github\dependabot.yml = .github\dependabot.yml
 		Directory.Build.props = Directory.Build.props
 		.github\workflows\dotnet-core-desktop.yml = .github\workflows\dotnet-core-desktop.yml
 		nuget.config = nuget.config
