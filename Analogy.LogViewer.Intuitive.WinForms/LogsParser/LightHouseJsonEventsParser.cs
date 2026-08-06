@@ -12,7 +12,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Analogy.LogViewer.Intuitive.LogsParser
+namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
 {
     public class LightHouseJsonEventsParser : OfflineDataProviderWinForms
     {

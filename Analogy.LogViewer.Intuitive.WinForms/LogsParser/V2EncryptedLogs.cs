@@ -1,11 +1,10 @@
-﻿using Analogy.Interfaces;
-using Analogy.Interfaces.DataTypes;
+﻿using Analogy.Interfaces.DataTypes;
 using Analogy.LogViewer.Intuitive.Loaders;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace Analogy.LogViewer.Intuitive.LogsParser
+namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
 {
     public class V2EncryptedLogs : BaseEncryptedLog
     {

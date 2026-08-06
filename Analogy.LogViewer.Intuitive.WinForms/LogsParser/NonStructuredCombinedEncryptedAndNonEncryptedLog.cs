@@ -1,14 +1,7 @@
-﻿using Analogy.Interfaces;
-using Analogy.Interfaces.DataTypes;
-using Analogy.LogViewer.ElasticCommonSchema.Parsers;
-using Analogy.LogViewer.Intuitive.Managers;
+﻿using Analogy.Interfaces.DataTypes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Analogy.LogViewer.Intuitive.LogsParser
+namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
 {
     internal sealed class NonStructuredCombinedEncryptedAndNonEncryptedLog : BaseCombinedEncryptedAndNonEncryptedLog
     {

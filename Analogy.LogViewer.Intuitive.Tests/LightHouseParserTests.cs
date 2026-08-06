@@ -13,7 +13,7 @@ namespace Analogy.LogViewer.Intuitive.Tests
             string filename = @"C:\Users\lbanai\Downloads\1490883378792084531.csv";
 
             using var cancellationTokenSource = new CancellationTokenSource();
-            var p = new LightHouseEventsParser();
+            var p = new LightHouseCsvEventsParser();
             MessageHandlerForTesting handler = new MessageHandlerForTesting();
             var allMessages = (await p.Process(filename, cancellationTokenSource.Token, handler)).ToList();
             Assert.IsTrue(allMessages.Any());
@@ -22,7 +22,7 @@ namespace Analogy.LogViewer.Intuitive.Tests
         public void Parse_Event_DateTime_Test()
         {
             string time = "2025-11-04 16:26:32.749";
-            var parsed = LightHouseEventsParser.ParseDateTime(time);
+            var parsed = LightHouseCsvEventsParser.ParseDateTime(time);
             var expected = new DateTimeOffset(2025, 11, 4, 16, 26, 32, TimeSpan.Zero).AddMilliseconds(749);
             Assert.IsTrue(parsed.Equals(expected));
         }
@@ -58,6 +58,22 @@ namespace Analogy.LogViewer.Intuitive.Tests
             Assert.AreEqual(2, allMessages.Count);
             Assert.AreEqual(Analogy.Interfaces.DataTypes.AnalogyLogLevel.Error, allMessages[0].Level);
             Assert.IsTrue(allMessages[0].Text!.Contains("SYSTEM_MODE_POWER_ON", StringComparison.Ordinal));
+        }
+
+        [TestMethod]
+        public async Task TestEventsParser_EvtTextOnlyFormat()
+        {
+            string filename = "lighthouse-evt-text-only.csv";
+
+            using var cancellationTokenSource = new CancellationTokenSource();
+            var p = new LightHouseCsvEventsParser();
+            MessageHandlerForTesting handler = new MessageHandlerForTesting();
+            var allMessages = (await p.Process(filename, cancellationTokenSource.Token, handler)).ToList();
+            Assert.AreEqual(4, allMessages.Count);
+            Assert.AreEqual(Analogy.Interfaces.DataTypes.AnalogyLogLevel.Error, allMessages[0].Level);
+            Assert.IsTrue(allMessages[1].Text!.Contains("FRL", StringComparison.Ordinal));
+            Assert.AreEqual("78", allMessages[1].Source);
+            Assert.AreEqual("SENSOR_EVENT_UNION", allMessages[3].Module);
         }
     }
 }

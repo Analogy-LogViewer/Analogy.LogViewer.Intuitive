@@ -1,0 +1,5 @@
+evt_text
+"1520: 1970/01/01 00:00:13 (    0, 0x0000000):  24: {12}   ERR (lcl_ts=11895) 55000(8_ADV)-SYSTEM_MODE_POWER_ON nd=24, 00000000 00000000 00000000 00000000, file=log_code.cpp:29"
+" 264: 1970/01/01 00:00:19 (    0, 0x0000000):  78: {610} FRL: SRC=0200|0200 HW_FRL=0010|0010 RX_SS=00|0000 TX_SS=00|0000 [02: LCL_FRL_MCMBL]"
+" 373: 1970/01/01 00:00:21 (    0, 0x0000000): 116: {12}   ERR (lcl_ts=21318) 46600(0_INF)-SENTRY_INFO_SIGNAL_WARN nd=116, 74010009 4016E78A 4027FF89 4017FFC2, file=signal_sentry.cpp:708"
+" 374: 1970/01/01 00:00:21 (    0, 0x0000000): 116: {68} SENSOR_EVENT_UNION: {""sensorThresholdEvent"": {""node_id"": 116, ""sensor_current"": 2.3579, ""sensor_error_class"": 0, ""sensor_error_code"": 46600, ""sensor_name"": ""Brakes ADC Vref""}}"

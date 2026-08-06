@@ -1,8 +1,7 @@
-﻿using Analogy.Interfaces;
-using Analogy.Interfaces.DataTypes;
+﻿using Analogy.Interfaces.DataTypes;
 using System;
 
-namespace Analogy.LogViewer.Intuitive.LogsParser
+namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
 {
     public class NonStructureEncryptedLogs : BaseEncryptedLog
     {

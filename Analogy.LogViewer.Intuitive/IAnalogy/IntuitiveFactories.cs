@@ -43,7 +43,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
             var p4 = new EcsCombinedEncryptedAndNonEncryptedLog(new Guid("91819680-6e6a-4f6f-abee-3486174353ba"));
             var p5 = new ElasticCsvDataProvider();
             var p6 = new LightHouseNodeTraceParser();
-            var p7 = new LightHouseEventsParser();
+            var p7 = new LightHouseCsvEventsParser();
             var p8 = new LightHouseJsonEventsParser();
             DataProviders = new List<IAnalogyDataProvider>
             {

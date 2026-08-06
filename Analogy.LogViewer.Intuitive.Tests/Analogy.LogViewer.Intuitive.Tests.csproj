@@ -40,6 +40,9 @@
 		<None Update="lighthouse-events.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
+		<None Update="lighthouse-evt-text-only.csv">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Update="Microsoft.SourceLink.GitHub" Version="10.0.203" />

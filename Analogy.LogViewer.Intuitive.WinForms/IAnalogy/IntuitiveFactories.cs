@@ -1,7 +1,7 @@
 ﻿#pragma warning disable SA1401
 using Analogy.Interfaces;
 using Analogy.Interfaces.DataTypes;
-using Analogy.LogViewer.Intuitive.LogsParser;
+using Analogy.LogViewer.Intuitive.WinForms.LogsParser;
 using Analogy.LogViewer.Intuitive.WinForms.Properties;
 using Analogy.LogViewer.Template;
 using Analogy.LogViewer.Template.WinForms;
@@ -60,7 +60,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
             AddImage(p5.Id, p5.SmallImage, p5.LargeImage);
             var p6 = new LightHouseNodeTraceParser();
             AddImage(p6.Id, p6.SmallImage, p6.LargeImage);
-            var p7 = new LightHouseEventsParser();
+            var p7 = new LightHouseCsvEventsParser();
             AddImage(p7.Id, p7.SmallImage, p7.LargeImage);
             var p8 = new LightHouseJsonEventsParser();
             AddImage(p8.Id, p8.SmallImage, p8.LargeImage);

@@ -6,20 +6,16 @@ using Analogy.LogViewer.Intuitive.WinForms.Properties;
 using Analogy.LogViewer.Template.WinForms;
 using CsvHelper;
 using CsvHelper.Configuration;
-using MediaManager.Logging;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Analogy.LogViewer.Intuitive.LogsParser
+namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
 {
     public sealed class ElasticCsvDataProvider : OfflineDataProviderWinForms
     {
