@@ -24,10 +24,10 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
         public override Image? LargeImage { get; set; } = Resources.Intuitive32x32;
         public override Image? SmallImage { get; set; } = Resources.Intuitive16x16;
-        public override string FileOpenDialogFilters { get; set; } = "LightHouse event log files (*.csv)|*.csv";
+        public override string FileOpenDialogFilters { get; set; } = "LightHouse event log files (*.csv;*.log)|*.csv;*.log";
         public override Guid Id { get; set; } = new Guid("D851928C-65F2-4625-B9E9-C58E487A481B");
 
-        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.csv" };
+        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.csv", "*.log" };
         private string PowerCycle { get; set; } = "";
         public override async Task InitializeDataProvider(ILogger logger)
         {
@@ -98,7 +98,12 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
             ILogMessageCreatedHandler messagesHandler, List<IAnalogyLogMessage> msgs)
         {
             LastDateTimeOffset = DateTimeOffset.UtcNow;
+#if NET
             var lines = await File.ReadAllLinesAsync(fileName, token);
+#else
+            token.ThrowIfCancellationRequested();
+            var lines = File.ReadAllLines(fileName);
+#endif
             for (var i = 1; i < lines.Length; i++)
             {
                 token.ThrowIfCancellationRequested();
@@ -129,7 +134,13 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
         private static async Task<bool> IsEvtTextOnlyFormat(string fileName, CancellationToken token)
         {
             using var reader = new StreamReader(fileName);
-            var firstLine = await reader.ReadLineAsync(token);
+            string? firstLine;
+#if NET
+            firstLine = await reader.ReadLineAsync(token);
+#else
+            token.ThrowIfCancellationRequested();
+            firstLine = await reader.ReadLineAsync();
+#endif
             if (string.IsNullOrWhiteSpace(firstLine))
             {
                 return false;
@@ -161,9 +172,13 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
         private static string UnwrapCsvQuotedValue(string line)
         {
             var value = line.Trim();
-            if (value.Length >= 2 && value[0] is '"' && value[^1] is '"')
+            if (value.Length >= 2 && value[0] is '"' && value[value.Length - 1] is '"')
             {
+#if NET
                 value = value[1..^1].Replace("\"\"", "\"", StringComparison.Ordinal);
+#else
+                value = value.Substring(1, value.Length - 2).Replace("\"\"", "\"");
+#endif
             }
 
             return value;
@@ -184,12 +199,12 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
 
         private static AnalogyLogLevel ParseLevelFromEvtText(string evtText)
         {
-            if (evtText.Contains(" ERR ", StringComparison.OrdinalIgnoreCase))
+            if (ContainsIgnoreCase(evtText, " ERR "))
             {
                 return AnalogyLogLevel.Error;
             }
 
-            if (evtText.Contains(" WARN ", StringComparison.OrdinalIgnoreCase))
+            if (ContainsIgnoreCase(evtText, " WARN "))
             {
                 return AnalogyLogLevel.Warning;
             }
@@ -211,19 +226,27 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
                 var rest = restMatch.Groups[1].Value.Trim();
                 if (!string.IsNullOrEmpty(rest))
                 {
-                    if (rest.Contains(':', StringComparison.Ordinal))
+                    if (rest.IndexOf(':') >= 0)
                     {
                         var idx = rest.IndexOf(':');
                         if (idx > 0)
                         {
+#if NET
                             return rest[..idx].Trim();
+#else
+                            return rest.Substring(0, idx).Trim();
+#endif
                         }
                     }
 
                     var firstSpace = rest.IndexOf(' ');
                     if (firstSpace > 0)
                     {
+#if NET
                         return rest[..firstSpace].Trim();
+#else
+                        return rest.Substring(0, firstSpace).Trim();
+#endif
                     }
 
                     return rest;
@@ -231,6 +254,15 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
             }
 
             return level.ToString();
+        }
+
+        private static bool ContainsIgnoreCase(string text, string value)
+        {
+#if NET
+            return text.Contains(value, StringComparison.OrdinalIgnoreCase);
+#else
+            return text.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0;
+#endif
         }
 
         private IAnalogyLogMessage ParseMessage(LightHouseEventRowRecord record, string raw)
@@ -250,7 +282,11 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
             var i = record.Message.IndexOf(' ');
             if (i > 0)
             {
+#if NET
                 module = record.Message[..record.Message.IndexOf(' ')];
+#else
+                module = record.Message.Substring(0, record.Message.IndexOf(' '));
+#endif
             }
             var m = new AnalogyLogMessage()
             {
@@ -267,11 +303,11 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
             {
                 if (m.AdditionalProperties.TryGetValue("Exception", out var er) && !string.IsNullOrEmpty(er))
                 {
-                    m.Text += Environment.NewLine + string.Create(CultureInfo.InvariantCulture, $"Error: {er}");
+                    m.Text += Environment.NewLine + string.Format(CultureInfo.InvariantCulture, "Error: {0}", er);
                 }
                 if (m.AdditionalProperties.TryGetValue("StackTrace", out var ex) && !string.IsNullOrEmpty(ex))
                 {
-                    m.Text += Environment.NewLine + string.Create(CultureInfo.InvariantCulture, $"Exception: {ex}");
+                    m.Text += Environment.NewLine + string.Format(CultureInfo.InvariantCulture, "Exception: {0}", ex);
                 }
             }
             return m;

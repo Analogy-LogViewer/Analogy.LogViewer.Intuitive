@@ -63,7 +63,7 @@ namespace Analogy.LogViewer.Intuitive.Serilog
             var data = serializer.Deserialize(new JsonTextReader(new StringReader(line)));
             if (!(data is JObject fields))
             {
-                throw new InvalidDataException(string.Create(CultureInfo.InvariantCulture, $"The data on line {lineNumber} is not a complete JSON object."));
+                throw new InvalidDataException(string.Format(CultureInfo.InvariantCulture, "The data on line {0} is not a complete JSON object.", lineNumber));
             }
 
             result = new ParsingResult(ReadFromJObject(lineNumber, fields, messageFields), line);
@@ -143,7 +143,7 @@ namespace Analogy.LogViewer.Intuitive.Serilog
                 var renderedByIndex = r as JArray;
                 if (renderedByIndex is null)
                 {
-                    throw new InvalidDataException(string.Create(CultureInfo.InvariantCulture, $"The `{messageFields.Renderings}` value on line {lineNumber} is not an array as expected."));
+                    throw new InvalidDataException(string.Format(CultureInfo.InvariantCulture, "The `{0}` value on line {1} is not an array as expected.", messageFields.Renderings, lineNumber));
                 }
 
                 renderings = parsedTemplate.Tokens
@@ -212,7 +212,7 @@ namespace Analogy.LogViewer.Intuitive.Serilog
 
             if (token.Type is not JTokenType.String)
             {
-                throw new InvalidDataException(string.Create(CultureInfo.InvariantCulture, $"The value of `{field}` on line {lineNumber} is not in a supported format."));
+                throw new InvalidDataException(string.Format(CultureInfo.InvariantCulture, "The value of `{0}` on line {1} is not in a supported format.", field, lineNumber));
             }
             value = token.Value<string>();
             return true;
@@ -222,7 +222,7 @@ namespace Analogy.LogViewer.Intuitive.Serilog
         {
             if (!data.TryGetValue(field, out var token) || token.Type is JTokenType.Null)
             {
-                throw new InvalidDataException(string.Create(CultureInfo.InvariantCulture, $"The data on line {lineNumber} does not include the required `{field}` field."));
+                throw new InvalidDataException(string.Format(CultureInfo.InvariantCulture, "The data on line {0} does not include the required `{1}` field.", lineNumber, field));
             }
 
             if (token.Type is JTokenType.Date)
@@ -240,7 +240,7 @@ namespace Analogy.LogViewer.Intuitive.Serilog
 
             if (token.Type is not JTokenType.String)
             {
-                throw new InvalidDataException(string.Create(CultureInfo.InvariantCulture, $"The value of `{field}` on line {lineNumber} is not in a supported format."));
+                throw new InvalidDataException(string.Format(CultureInfo.InvariantCulture, "The value of `{0}` on line {1} is not in a supported format.", field, lineNumber));
             }
 #pragma warning disable MA0011
             return DateTimeOffset.Parse(token.Value<string>());

@@ -36,7 +36,11 @@ namespace Analogy.LogViewer.Intuitive.Loaders
             try
             {
                 AnalogyLogMessage? entry = null;
+#if NET
                 await using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+#else
+                using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+#endif
                 {
                     long count = 0;
                     using (var reader = new StreamReader(stream))
@@ -45,7 +49,13 @@ namespace Analogy.LogViewer.Intuitive.Loaders
 
                         while (!token.IsCancellationRequested && !reader.EndOfStream)
                         {
-                            var nextLine = await reader.ReadLineAsync(token);
+                            string? nextLine;
+#if NET
+                            nextLine = await reader.ReadLineAsync(token);
+#else
+                            token.ThrowIfCancellationRequested();
+                            nextLine = await reader.ReadLineAsync();
+#endif
                             var hasSeparators = nextLine != null && Parser.Splitters.Any(nextLine.Contains);
                             if (!hasSeparators) // handle multi-line messages
                             {

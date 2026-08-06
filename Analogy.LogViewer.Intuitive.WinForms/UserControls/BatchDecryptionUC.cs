@@ -34,7 +34,11 @@ namespace Analogy.LogViewer.Intuitive.UserControls
 
         private async void btnDycrpt_Click(object sender, EventArgs e)
         {
+#if NET
             if (Path.Exists(txtbLogFolder.Text))
+#else
+            if (Directory.Exists(txtbLogFolder.Text))
+#endif
             {
                 var files = Directory.GetFiles(txtbLogFolder.Text, "*.log");
                 if (files.Length is not 0)
@@ -119,7 +123,11 @@ namespace Analogy.LogViewer.Intuitive.UserControls
                         }
                     }
 
+#if NET
                     await File.WriteAllTextAsync(fileDecrypted, sb.ToString());
+#else
+                    File.WriteAllText(fileDecrypted, sb.ToString());
+#endif
                     return (true, fileDecrypted);
                 }
             }

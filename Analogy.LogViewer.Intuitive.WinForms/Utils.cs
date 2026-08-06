@@ -81,7 +81,7 @@ namespace Analogy.LogViewer.Intuitive
                 File.WriteAllText(fileName, text);
             }
 
-            private static string GetCsvFromMessage(AnalogyLogMessage m) => string.Create(CultureInfo.InvariantCulture, $"ID:{m.Id};Text:{m.Text};Source:{m.Source};Level:{m.Level};Class:{m.Class};Module:{m.Module};Method:{m.MethodName};FileName:{m.FileName};LineNumber:{m.LineNumber};ProcessID:{m.ProcessId};User:{m.User}");
+            private static string GetCsvFromMessage(AnalogyLogMessage m) => string.Format(CultureInfo.InvariantCulture, "ID:{0};Text:{1};Source:{2};Level:{3};Class:{4};Module:{5};Method:{6};FileName:{7};LineNumber:{8};ProcessID:{9};User:{10}", m.Id, m.Text, m.Source, m.Level, m.Class, m.Module, m.MethodName, m.FileName, m.LineNumber, m.ProcessId, m.User);
         }
     }
 }

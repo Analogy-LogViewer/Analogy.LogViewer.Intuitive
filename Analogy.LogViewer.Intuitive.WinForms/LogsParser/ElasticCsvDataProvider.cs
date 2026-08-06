@@ -101,11 +101,11 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
             {
                 if (m.AdditionalProperties.TryGetValue("Exception", out var er) && !string.IsNullOrEmpty(er))
                 {
-                    m.Text += Environment.NewLine + string.Create(CultureInfo.InvariantCulture, $"Error: {er}");
+                    m.Text += Environment.NewLine + string.Format(CultureInfo.InvariantCulture, "Error: {0}", er);
                 }
                 if (m.AdditionalProperties.TryGetValue("StackTrace", out var ex) && !string.IsNullOrEmpty(ex))
                 {
-                    m.Text += Environment.NewLine + string.Create(CultureInfo.InvariantCulture, $"Exception: {ex}");
+                    m.Text += Environment.NewLine + string.Format(CultureInfo.InvariantCulture, "Exception: {0}", ex);
                 }
             }
 

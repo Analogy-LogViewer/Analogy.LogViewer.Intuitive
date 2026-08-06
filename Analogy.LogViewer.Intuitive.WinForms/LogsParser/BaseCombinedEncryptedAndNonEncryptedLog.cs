@@ -39,7 +39,11 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
             if (CanOpenFile(fileName))
             {
                 bool isKeyLine = false;
+#if NET
                 await using FileStream fileStream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+#else
+                using FileStream fileStream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+#endif
                 bool invalidKey = false;
                 using StreamReader strReader = new StreamReader(fileStream, detectEncodingFromByteOrderMarks: false);
                 while (await strReader.ReadLineAsync() is { } encLine && !invalidKey)

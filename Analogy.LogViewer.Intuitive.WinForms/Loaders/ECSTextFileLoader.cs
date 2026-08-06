@@ -32,12 +32,26 @@ namespace Analogy.LogViewer.Intuitive.Loaders
             List<IAnalogyLogMessage> messages = new List<IAnalogyLogMessage>();
             try
             {
+#if NET
                 await using var stream = File.OpenRead(fileName);
+#else
+                using var stream = File.OpenRead(fileName);
+#endif
                 long count = 0;
                 using var reader = new StreamReader(stream);
                 while (!reader.EndOfStream)
                 {
-                    var logLine = await reader.ReadLineAsync(token);
+                    string? logLine;
+#if NET
+                    logLine = await reader.ReadLineAsync(token);
+#else
+                    token.ThrowIfCancellationRequested();
+                    logLine = await reader.ReadLineAsync();
+#endif
+                    if (logLine is null)
+                    {
+                        break;
+                    }
                     var message = EcsDocumentUtils.ParseLine(logLine!,
                         UserSettingsManager.Instance.ShowAllColumnsFromMetaDataField,
                         UserSettingsManager.Instance.AdditionalColumnsFromMetaDataField);

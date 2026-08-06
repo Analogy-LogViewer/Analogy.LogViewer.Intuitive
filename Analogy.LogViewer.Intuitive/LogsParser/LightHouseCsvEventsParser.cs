@@ -20,10 +20,10 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
         private static DateTimeOffset LastDateTimeOffset { get; set; } = DateTimeOffset.UtcNow;
         public override string? OptionalTitle { get; set; } = "LightHouse Events CSV Log";
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
-        public override string FileOpenDialogFilters { get; set; } = "LightHouse event log files (*.csv)|*.csv";
+        public override string FileOpenDialogFilters { get; set; } = "LightHouse event log files (*.csv;*.log)|*.csv;*.log";
         public override Guid Id { get; set; } = new Guid("D851928C-65F2-4625-B9E9-C58E487A481B");
 
-        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.csv" };
+        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.csv", "*.log" };
         private string PowerCycle { get; set; } = "";
         public override async Task InitializeDataProvider(ILogger logger)
         {

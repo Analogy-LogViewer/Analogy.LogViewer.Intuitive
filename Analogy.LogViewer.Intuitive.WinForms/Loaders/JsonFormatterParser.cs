@@ -55,8 +55,18 @@ namespace Analogy.LogViewer.Intuitive.Loaders
                                 {
                                     string? json;
                                     long count = 0;
-                                    while (!token.IsCancellationRequested && (json = await streamReader.ReadLineAsync(token)) is not null)
+                                    while (!token.IsCancellationRequested)
                                     {
+ #if NET
+                                        json = await streamReader.ReadLineAsync(token);
+ #else
+                                        token.ThrowIfCancellationRequested();
+                                        json = await streamReader.ReadLineAsync();
+ #endif
+                                        if (json is null)
+                                        {
+                                            break;
+                                        }
                                         var data = JsonConvert.DeserializeObject(json, jsonSerializerSettings);
                                         var jo = data as JObject;
                                         var evt = LogEventReader.ReadFromJObject(jo, messageFields);
@@ -77,8 +87,18 @@ namespace Analogy.LogViewer.Intuitive.Loaders
                         {
                             string? json;
                             long count = 0;
-                            while ((json = await streamReader.ReadLineAsync(token)) is not null)
+                            while (true)
                             {
+ #if NET
+                                json = await streamReader.ReadLineAsync(token);
+ #else
+                                token.ThrowIfCancellationRequested();
+                                json = await streamReader.ReadLineAsync();
+ #endif
+                                if (json is null)
+                                {
+                                    break;
+                                }
                                 var data = JsonConvert.DeserializeObject(json, jsonSerializerSettings);
                                 var jo = data as JObject;
                                 var evt = LogEventReader.ReadFromJObject(jo, messageFields);

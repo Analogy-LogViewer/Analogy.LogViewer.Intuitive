@@ -15,10 +15,10 @@ namespace Analogy.LogViewer.Intuitive.LogsParser
     {
         public override string? OptionalTitle { get; set; } = "LightHouse Events JSON Log";
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
-        public override string FileOpenDialogFilters { get; set; } = "LightHouse event log files (*.json)|*.json";
+        public override string FileOpenDialogFilters { get; set; } = "LightHouse event log files (*.json;*.log)|*.json;*.log";
         public override Guid Id { get; set; } = new Guid("ce31b4bb-6489-4a16-ad0c-8ca857287b6d");
 
-        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.json" };
+        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.json", "*.log" };
 
         public override async Task InitializeDataProvider(ILogger logger)
         {

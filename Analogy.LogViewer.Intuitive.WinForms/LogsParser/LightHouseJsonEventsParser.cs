@@ -20,10 +20,10 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
         public override string? InitialFolderFullPath { get; set; } = Environment.CurrentDirectory;
         public override Image? LargeImage { get; set; } = Resources.Intuitive32x32;
         public override Image? SmallImage { get; set; } = Resources.Intuitive16x16;
-        public override string FileOpenDialogFilters { get; set; } = "LightHouse event log files (*.json)|*.json";
+        public override string FileOpenDialogFilters { get; set; } = "LightHouse event log files (*.json;*.log)|*.json;*.log";
         public override Guid Id { get; set; } = new Guid("A36D427B-1F45-4AC5-988B-DBE4A5790A01");
 
-        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.json" };
+        public override IEnumerable<string> SupportFormats { get; set; } = new[] { "*.json", "*.log" };
 
         public override async Task InitializeDataProvider(ILogger logger)
         {
@@ -38,7 +38,13 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
             {
                 try
                 {
-                    var json = await File.ReadAllTextAsync(fileName, token);
+                    string json;
+#if NET
+                    json = await File.ReadAllTextAsync(fileName, token);
+#else
+                    token.ThrowIfCancellationRequested();
+                    json = File.ReadAllText(fileName);
+#endif
                     using var doc = JsonDocument.Parse(json);
                     if (doc.RootElement.ValueKind is not JsonValueKind.Array)
                     {
@@ -166,14 +172,14 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
 
         private static AnalogyLogLevel ParseLevel(string eventLabel, string eventText)
         {
-            if ((!string.IsNullOrEmpty(eventLabel) && eventLabel.Contains("error", StringComparison.OrdinalIgnoreCase)) ||
-                (!string.IsNullOrEmpty(eventText) && eventText.Contains("ERR", StringComparison.OrdinalIgnoreCase)))
+            if ((!string.IsNullOrEmpty(eventLabel) && ContainsIgnoreCase(eventLabel, "error")) ||
+                (!string.IsNullOrEmpty(eventText) && ContainsIgnoreCase(eventText, "ERR")))
             {
                 return AnalogyLogLevel.Error;
             }
 
-            if ((!string.IsNullOrEmpty(eventLabel) && eventLabel.Contains("warn", StringComparison.OrdinalIgnoreCase)) ||
-                (!string.IsNullOrEmpty(eventText) && eventText.Contains("WARN", StringComparison.OrdinalIgnoreCase)))
+            if ((!string.IsNullOrEmpty(eventLabel) && ContainsIgnoreCase(eventLabel, "warn")) ||
+                (!string.IsNullOrEmpty(eventText) && ContainsIgnoreCase(eventText, "WARN")))
             {
                 return AnalogyLogLevel.Warning;
             }
@@ -203,6 +209,15 @@ namespace Analogy.LogViewer.Intuitive.WinForms.LogsParser
             }
 
             return DateTimeOffset.UtcNow;
+        }
+
+        private static bool ContainsIgnoreCase(string text, string value)
+        {
+#if NET
+            return text.Contains(value, StringComparison.OrdinalIgnoreCase);
+#else
+            return text.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0;
+#endif
         }
 
         private static void AddIfNotEmpty(AnalogyLogMessage msg, string key, string value)
