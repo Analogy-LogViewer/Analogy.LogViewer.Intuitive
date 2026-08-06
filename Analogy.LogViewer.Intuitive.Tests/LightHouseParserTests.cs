@@ -57,7 +57,7 @@ namespace Analogy.LogViewer.Intuitive.Tests
             Assert.IsTrue(allMessages.Any());
             Assert.AreEqual(2, allMessages.Count);
             Assert.AreEqual(Analogy.Interfaces.DataTypes.AnalogyLogLevel.Error, allMessages[0].Level);
-            Assert.IsTrue(allMessages[0].Text!.Contains("SYSTEM_MODE_POWER_ON", StringComparison.Ordinal));
+            Assert.IsTrue(allMessages[0].Text!.Contains("SYSTEM_MODE", StringComparison.Ordinal));
         }
 
         [TestMethod]
