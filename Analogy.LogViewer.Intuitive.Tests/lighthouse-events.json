@@ -1,0 +1,112 @@
+[
+  {
+    "index": 1,
+    "id": "13741f1f-118f-43fe-815b-a897ad674191-18-00-0",
+    "event_entry": {
+      "msc_error_posting": {
+        "error_class": 1,
+        "error_code": 15000,
+        "error_name": "POWER_ON",
+        "file_name": "log_code.cpp",
+        "line_number": 29,
+        "local_timestamp": 11895,
+        "mid": -1,
+        "node_id": 24,
+        "node_name": "aaaa",
+        "params": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "record_header": {
+      "node_id": 24,
+      "sequence_count_evt_src": 0,
+      "gmt_timestamp_sec": 13,
+      "gmt_timestamp_usec": 111111,
+      "ms_since_boot": 13151,
+      "servosync_timestamp": 0,
+      "msc_system_state": "MscSystemState",
+      "msc_procedure_state": "MscProcedureState",
+      "msc_procedure_count": 0,
+      "dvstream_channel": null,
+      "servosync_timestamp64": 0,
+      "procedure_uuid": "",
+      "pairing_uuid": "",
+      "servosync_cycle_fraction": 0.0,
+      "power_cycle_uuid": "",
+      "node_name": "SIMR",
+      "gmt_timestamp": 13.15184
+    },
+    "isi_prefix": {
+      "isi_prefix_msg_type": 1,
+      "isi_prefix_len_bytes": 32,
+      "isi_prefix_version": "131075",
+      "isi_prefix_msg_len_bytes": 112,
+      "isi_prefix_per_subscriber_seq_ct": 1520,
+      "isi_prefix_global_seq_ct": 1520,
+      "isi_prefix_gmt_timestamp": 14,
+      "isi_prefix_options": 536870924
+    },
+    "power_cycle_id": "aaaaa-118f-43fe-815b-a897ad674191",
+    "evt_label": "error_",
+    "evt_text": "1520: 1970/01/01 00:00:13 (    0, 0x0000000):  24: {12}   ERR (lcl_ts=11895) 55000(8_ADV)-SYSTEM_MODE nd=24, 00000000 00000000 00000000 00000000, file=log.cpp:2"
+  },
+  {
+    "index": 2,
+    "id": "aaaaaaa-118f-43fe-815b-a897ad674191-24-00-0",
+    "event_entry": {
+      "msc_error_posting": {
+        "error_class": 8,
+        "error_code": 55000,
+        "error_name": "SYSTEM_MODE",
+        "file_name": "log.cpp",
+        "line_number": 29,
+        "local_timestamp": 14217,
+        "mid": -1,
+        "node_id": 36,
+        "node_name": "SIMR2",
+        "params": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "record_header": {
+      "node_id": 36,
+      "sequence_count_evt_src": 0,
+      "gmt_timestamp_sec": 15,
+      "gmt_timestamp_usec": 111111,
+      "ms_since_boot": 15393,
+      "servosync_timestamp": 0,
+      "msc_system_state": "MscSystemState",
+      "msc_procedure_state": "MscProcedureState",
+      "msc_procedure_count": 0,
+      "dvstream_channel": null,
+      "servosync_timestamp64": 0,
+      "procedure_uuid": "",
+      "pairing_uuid": "",
+      "servosync_cycle_fraction": 0.0,
+      "power_cycle_uuid": "",
+      "node_name": "SIMR2",
+      "gmt_timestamp": 15.393642
+    },
+    "isi_prefix": {
+      "isi_prefix_msg_type": 1,
+      "isi_prefix_len_bytes": 32,
+      "isi_prefix_version": "131075",
+      "isi_prefix_msg_len_bytes": 114,
+      "isi_prefix_per_subscriber_seq_ct": 1759,
+      "isi_prefix_global_seq_ct": 1759,
+      "isi_prefix_gmt_timestamp": 16,
+      "isi_prefix_options": 536870924
+    },
+    "power_cycle_id": "aaaa-118f-43fe-8aaaa-a897ad674191",
+    "evt_label": "error",
+    "evt_text": "1759: 1970/01/01 00:00:15 (    0, 0x0000000):  36: {12}   ERR (lcl_ts=14217) 55000(8_ADV)-SYSTEM_MODE_POWER_ON nd=36, 00000000 00000000 00000000 00000000, file=log.cpp:9"
+  }
+]

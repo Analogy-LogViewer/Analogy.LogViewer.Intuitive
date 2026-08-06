@@ -44,6 +44,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
             var p5 = new ElasticCsvDataProvider();
             var p6 = new LightHouseNodeTraceParser();
             var p7 = new LightHouseEventsParser();
+            var p8 = new LightHouseJsonEventsParser();
             DataProviders = new List<IAnalogyDataProvider>
             {
                 p1,
@@ -53,6 +54,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
                 p5,
                 p6,
                 p7,
+                p8,
             };
         }
     }

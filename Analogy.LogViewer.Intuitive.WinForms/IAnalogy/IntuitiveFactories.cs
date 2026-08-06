@@ -61,7 +61,9 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
             var p6 = new LightHouseNodeTraceParser();
             AddImage(p6.Id, p6.SmallImage, p6.LargeImage);
             var p7 = new LightHouseEventsParser();
-            AddImage(p6.Id, p7.SmallImage, p7.LargeImage);
+            AddImage(p7.Id, p7.SmallImage, p7.LargeImage);
+            var p8 = new LightHouseJsonEventsParser();
+            AddImage(p8.Id, p8.SmallImage, p8.LargeImage);
             DataProviders = new List<IAnalogyDataProvider>
             {
                 p1,
@@ -71,6 +73,7 @@ namespace Analogy.LogViewer.Intuitive.IAnalogy
                 p5,
                 p6,
                 p7,
+                p8,
             };
         }
     }

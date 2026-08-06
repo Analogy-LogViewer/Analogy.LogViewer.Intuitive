@@ -7,17 +7,17 @@ namespace Analogy.LogViewer.Intuitive.Tests
     [TestClass]
     public class LightHouseParserTests
     {
-        //[TestMethod]
-        //public async Task TestEventsParser()
-        //{
-        //    string filename = @"C:\Users\lbanai\Downloads\events_6924a1e0-0339-4f18-9aba-058f4108e7ac.19aba4180f7.csv";
+        [TestMethod]
+        public async Task TestEventsParser()
+        {
+            string filename = @"C:\Users\lbanai\Downloads\1490883378792084531.csv";
 
-        //    using var cancellationTokenSource = new CancellationTokenSource();
-        //    var p = new LightHouseEventsParser();
-        //    MessageHandlerForTesting handler = new MessageHandlerForTesting();
-        //    var allMessages = (await p.Process(filename, cancellationTokenSource.Token, handler)).ToList();
-        //    Assert.IsTrue(allMessages.Any());
-        //}
+            using var cancellationTokenSource = new CancellationTokenSource();
+            var p = new LightHouseEventsParser();
+            MessageHandlerForTesting handler = new MessageHandlerForTesting();
+            var allMessages = (await p.Process(filename, cancellationTokenSource.Token, handler)).ToList();
+            Assert.IsTrue(allMessages.Any());
+        }
         [TestMethod]
         public void Parse_Event_DateTime_Test()
         {
@@ -44,6 +44,20 @@ namespace Analogy.LogViewer.Intuitive.Tests
             var parsed = LightHouseNodeTraceParser.ParseDateTime(time);
             var expected = new DateTimeOffset(2025, 02, 19, 11, 22, 13, TimeSpan.Zero).AddMilliseconds(248).AddMicroseconds(837);
             Assert.IsTrue(parsed.Equals(expected));
+        }
+        [TestMethod]
+        public async Task TestEventsJsonParser()
+        {
+            string filename = "lighthouse-events.json";
+
+            using var cancellationTokenSource = new CancellationTokenSource();
+            var p = new LightHouseJsonEventsParser();
+            MessageHandlerForTesting handler = new MessageHandlerForTesting();
+            var allMessages = (await p.Process(filename, cancellationTokenSource.Token, handler)).ToList();
+            Assert.IsTrue(allMessages.Any());
+            Assert.AreEqual(2, allMessages.Count);
+            Assert.AreEqual(Analogy.Interfaces.DataTypes.AnalogyLogLevel.Error, allMessages[0].Level);
+            Assert.IsTrue(allMessages[0].Text!.Contains("SYSTEM_MODE_POWER_ON", StringComparison.Ordinal));
         }
     }
 }
