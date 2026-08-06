@@ -7,17 +7,17 @@ namespace Analogy.LogViewer.Intuitive.Tests
     [TestClass]
     public class LightHouseParserTests
     {
-        [TestMethod]
-        public async Task TestEventsParser()
-        {
-            string filename = @"C:\Users\lbanai\Downloads\1490883378792084531.csv";
+        //[TestMethod]
+        //public async Task TestEventsParser()
+        //{
+        //    string filename = @"C:\Users\lbanai\Downloads\1490883378792084531.csv";
 
-            using var cancellationTokenSource = new CancellationTokenSource();
-            var p = new LightHouseCsvEventsParser();
-            MessageHandlerForTesting handler = new MessageHandlerForTesting();
-            var allMessages = (await p.Process(filename, cancellationTokenSource.Token, handler)).ToList();
-            Assert.IsTrue(allMessages.Any());
-        }
+        //    using var cancellationTokenSource = new CancellationTokenSource();
+        //    var p = new LightHouseCsvEventsParser();
+        //    MessageHandlerForTesting handler = new MessageHandlerForTesting();
+        //    var allMessages = (await p.Process(filename, cancellationTokenSource.Token, handler)).ToList();
+        //    Assert.IsTrue(allMessages.Any());
+        //}
         [TestMethod]
         public void Parse_Event_DateTime_Test()
         {
