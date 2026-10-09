@@ -69,7 +69,7 @@
 		<None Include="Resources\settings.png" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Update="Meziantou.Analyzer" Version="3.0.290" />
+	  <PackageReference Update="Meziantou.Analyzer" Version="3.0.296" />
 	  <PackageReference Update="Microsoft.CodeAnalysis.CSharp.CodeStyle" Version="5.9.0" />
 	  <PackageReference Update="Microsoft.SourceLink.GitHub" Version="10.0.401" />
 	  <PackageReference Update="Roslynator.Analyzers" Version="5.0.0" />
