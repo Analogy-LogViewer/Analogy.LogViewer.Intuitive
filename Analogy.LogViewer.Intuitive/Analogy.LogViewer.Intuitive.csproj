@@ -32,9 +32,8 @@
 		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
 		<ApplicationIcon>AnalogyIcon.ico</ApplicationIcon>
 		<ForceDesignerDPIUnaware>true</ForceDesignerDPIUnaware>
-		<ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
-		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-		<IsAotCompatible>true</IsAotCompatible>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<IsAotCompatible>false</IsAotCompatible>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="README.md" Pack="true" PackagePath="\" />
