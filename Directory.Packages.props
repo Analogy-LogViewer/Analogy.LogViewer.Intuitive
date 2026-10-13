@@ -16,7 +16,7 @@
 		<PackageVersion Include="Elastic.CommonSchema" Version="9.0.0" />
 		<PackageVersion Include="Elastic.CommonSchema.Serilog" Version="9.0.0" />
 		<PackageVersion Include="JunitXml.TestLogger" Version="8.0.0" />
-		<PackageVersion Include="Meziantou.Analyzer" Version="3.0.299" />
+		<PackageVersion Include="Meziantou.Analyzer" Version="3.0.302" />
 		<PackageVersion Include="Microsoft.CodeAnalysis.CSharp.CodeStyle" Version="5.9.0" />
 		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.10.1" />
 		<PackageVersion Include="Microsoft.SourceLink.GitHub" Version="10.0.401" />
