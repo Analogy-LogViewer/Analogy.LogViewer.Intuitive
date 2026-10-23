@@ -7,7 +7,7 @@
 		<PackageVersion Include="Analogy.LogViewer.ElasticCommonSchema" Version="9.0.6.1" />
 		<PackageVersion Include="Analogy.LogViewer.ElasticCommonSchema.WinForms" Version="9.0.6.1" />
 		<PackageVersion Include="Analogy.LogViewer.Interfaces" Version="9.0.6" />
-		<PackageVersion Include="Analogy.LogViewer.Serilog" Version="9.0.5" />
+		<PackageVersion Include="Analogy.LogViewer.Serilog" Version="9.0.7" />
 		<PackageVersion Include="Analogy.LogViewer.Template" Version="9.0.6" />
 		<PackageVersion Include="Analogy.LogViewer.Template.WinForms" Version="9.0.6" />
 		<PackageVersion Include="coverlet.collector" Version="10.1.0" />
@@ -16,7 +16,7 @@
 		<PackageVersion Include="Elastic.CommonSchema" Version="9.0.0" />
 		<PackageVersion Include="Elastic.CommonSchema.Serilog" Version="9.0.0" />
 		<PackageVersion Include="JunitXml.TestLogger" Version="8.0.0" />
-		<PackageVersion Include="Meziantou.Analyzer" Version="3.0.303" />
+		<PackageVersion Include="Meziantou.Analyzer" Version="3.0.316" />
 		<PackageVersion Include="Microsoft.CodeAnalysis.CSharp.CodeStyle" Version="5.9.0" />
 		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
 		<PackageVersion Include="Microsoft.SourceLink.GitHub" Version="10.0.402" />
